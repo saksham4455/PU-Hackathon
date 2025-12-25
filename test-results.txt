@@ -1,0 +1,32 @@
+﻿Γ£à PASSED: Sanitize filename removes dangerous characters
+Γ£à PASSED: Sanitize filename preserves valid characters
+Γ£à PASSED: Sanitize filename handles special characters
+node : Γ¥î FAILED: Generate secure filename creates 
+UUID-based name
+At line:1 char:1
++ node test/upload-security-tests.js 2>&1 | Out-File 
+-FilePath "test-re ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Γ¥î FAILED: 
+    Gen...UUID-based name:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+   Error: Should be UUID v4 format with extension
+Γ£à PASSED: Generate secure filename handles multiple dots
+Γ£à PASSED: Generate secure filenames are unique
+Γ£à PASSED: Validate PNG file type correctly
+Γ£à PASSED: Validate file type mismatch detection
+Γ£à PASSED: Validate disallowed file types are rejected
+Γ£à PASSED: File size limits are enforced
+Γ£à PASSED: Path traversal attempts are blocked
+Γ£à PASSED: Absolute paths are sanitized
+Γ£à PASSED: UUID format prevents predictable filenames
+\n======================================================================
+TEST SUMMARY
+======================================================================
+Total Tests: 13
+Γ£à Passed: 12
+Γ¥î Failed: 1
+Success Rate: 92.3%
+======================================================================
+\nΓÜá∩╕Å  Some tests failed. Review above for details.

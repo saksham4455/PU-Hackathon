@@ -1,0 +1,301 @@
+{
+  "users": [
+    {
+      "id": "1761335666815k8sd30ib0",
+      "email": "siddheshvikram1@gmail.com",
+      "password": "Sam123",
+      "full_name": "Sam",
+      "role": "citizen",
+      "created_at": "2025-10-24T19:54:26.815Z",
+      "updated_at": "2025-10-24T19:54:26.815Z"
+    },
+    {
+      "id": "1761396234484vbvmk3i07",
+      "email": "Divya@gmail.com",
+      "password": "Divya@123",
+      "full_name": "Divya",
+      "role": "citizen",
+      "created_at": "2025-10-25T12:43:54.484Z",
+      "updated_at": "2025-10-25T12:43:54.484Z"
+    },
+    {
+      "id": "1761396270390yn718qpah",
+      "email": "Mahesh@gmail.com",
+      "password": "Mahesh@123",
+      "full_name": "Mahesh",
+      "role": "citizen",
+      "created_at": "2025-10-25T12:44:30.390Z",
+      "updated_at": "2025-10-25T12:44:30.390Z"
+    },
+    {
+      "id": "1761400000001abc123def",
+      "email": "priya.sharma@gmail.com",
+      "password": "Priya@456",
+      "full_name": "Priya Sharma",
+      "role": "citizen",
+      "created_at": "2025-10-25T14:30:15.123Z",
+      "updated_at": "2025-10-25T14:30:15.123Z"
+    },
+    {
+      "id": "1761400000002def456ghi",
+      "email": "raj.patel@gmail.com",
+      "password": "Raj@789",
+      "full_name": "Raj Patel",
+      "role": "citizen",
+      "created_at": "2025-10-25T15:45:22.456Z",
+      "updated_at": "2025-10-25T15:45:22.456Z"
+    },
+    {
+      "id": "1761400000003ghi789jkl",
+      "email": "anita.singh@gmail.com",
+      "password": "Anita@321",
+      "full_name": "Anita Singh",
+      "role": "citizen",
+      "created_at": "2025-10-25T16:20:33.789Z",
+      "updated_at": "2025-10-25T16:20:33.789Z"
+    },
+    {
+      "id": "1761400000004jkl012mno",
+      "email": "vikram.kumar@gmail.com",
+      "password": "Vikram@654",
+      "full_name": "Vikram Kumar",
+      "role": "citizen",
+      "created_at": "2025-10-25T17:10:44.012Z",
+      "updated_at": "2025-10-25T17:10:44.012Z"
+    },
+    {
+      "id": "1761400000005mno345pqr",
+      "email": "sunita.gupta@gmail.com",
+      "password": "Sunita@987",
+      "full_name": "Sunita Gupta",
+      "role": "citizen",
+      "created_at": "2025-10-25T18:25:55.345Z",
+      "updated_at": "2025-10-25T18:25:55.345Z"
+    },
+    {
+      "id": "1761400000006pqr678stu",
+      "email": "amit.jain@gmail.com",
+      "password": "Amit@147",
+      "full_name": "Amit Jain",
+      "role": "citizen",
+      "created_at": "2025-10-25T19:40:11.678Z",
+      "updated_at": "2025-10-25T19:40:11.678Z"
+    },
+    {
+      "id": "1761400000007stu901vwx",
+      "email": "kavita.reddy@gmail.com",
+      "password": "Kavita@258",
+      "full_name": "Kavita Reddy",
+      "role": "citizen",
+      "created_at": "2025-10-25T20:55:22.901Z",
+      "updated_at": "2025-10-25T20:55:22.901Z"
+    },
+    {
+      "id": "1761400000008vwx234yza",
+      "email": "suresh.mishra@gmail.com",
+      "password": "Suresh@369",
+      "full_name": "Suresh Mishra",
+      "role": "citizen",
+      "created_at": "2025-10-25T21:15:33.234Z",
+      "updated_at": "2025-10-25T21:15:33.234Z"
+    },
+    {
+      "id": "1761400000009yza567bcd",
+      "email": "meera.agarwal@gmail.com",
+      "password": "Meera@741",
+      "full_name": "Meera Agarwal",
+      "role": "citizen",
+      "created_at": "2025-10-25T22:30:44.567Z",
+      "updated_at": "2025-10-25T22:30:44.567Z"
+    },
+    {
+      "id": "1761400000010bcd890efg",
+      "email": "rohit.sharma@gmail.com",
+      "password": "Rohit@852",
+      "full_name": "Rohit Sharma",
+      "role": "citizen",
+      "created_at": "2025-10-25T23:45:55.890Z",
+      "updated_at": "2025-10-25T23:45:55.890Z"
+    },
+    {
+      "id": "1761400000011efg123hij",
+      "email": "pallavi.desai@gmail.com",
+      "password": "Pallavi@963",
+      "full_name": "Pallavi Desai",
+      "role": "citizen",
+      "created_at": "2025-10-26T00:10:11.123Z",
+      "updated_at": "2025-10-26T00:10:11.123Z"
+    },
+    {
+      "id": "1761400000012hij456klm",
+      "email": "arjun.tiwari@gmail.com",
+      "password": "Arjun@159",
+      "full_name": "Arjun Tiwari",
+      "role": "citizen",
+      "created_at": "2025-10-26T01:25:22.456Z",
+      "updated_at": "2025-10-26T01:25:22.456Z"
+    },
+    {
+      "id": "1761400000013klm789nop",
+      "email": "deepika.verma@gmail.com",
+      "password": "Deepika@357",
+      "full_name": "Deepika Verma",
+      "role": "citizen",
+      "created_at": "2025-10-26T02:40:33.789Z",
+      "updated_at": "2025-10-26T02:40:33.789Z"
+    },
+    {
+      "id": "1761400000014nop012qrs",
+      "email": "manish.bansal@gmail.com",
+      "password": "Manish@468",
+      "full_name": "Manish Bansal",
+      "role": "citizen",
+      "created_at": "2025-10-26T03:55:44.012Z",
+      "updated_at": "2025-10-26T03:55:44.012Z"
+    },
+    {
+      "id": "1761400000015qrs345tuv",
+      "email": "neha.chopra@gmail.com",
+      "password": "Neha@579",
+      "full_name": "Neha Chopra",
+      "role": "citizen",
+      "created_at": "2025-10-26T05:10:55.345Z",
+      "updated_at": "2025-10-26T05:10:55.345Z"
+    },
+    {
+      "id": "1761400000016tuv678wxy",
+      "email": "sanjay.malhotra@gmail.com",
+      "password": "Sanjay@680",
+      "full_name": "Sanjay Malhotra",
+      "role": "citizen",
+      "created_at": "2025-10-26T06:25:11.678Z",
+      "updated_at": "2025-10-26T06:25:11.678Z"
+    },
+    {
+      "id": "1761400000017wxy901zab",
+      "email": "ritu.saxena@gmail.com",
+      "password": "Ritu@791",
+      "full_name": "Ritu Saxena",
+      "role": "citizen",
+      "created_at": "2025-10-26T07:40:22.901Z",
+      "updated_at": "2025-10-26T07:40:22.901Z"
+    },
+    {
+      "id": "1761400000018zab234cde",
+      "email": "gaurav.bhatia@gmail.com",
+      "password": "Gaurav@802",
+      "full_name": "Gaurav Bhatia",
+      "role": "citizen",
+      "created_at": "2025-10-26T08:55:33.234Z",
+      "updated_at": "2025-10-26T08:55:33.234Z"
+    },
+    {
+      "id": "1761400000019cde567fgh",
+      "email": "shilpa.kapoor@gmail.com",
+      "password": "Shilpa@913",
+      "full_name": "Shilpa Kapoor",
+      "role": "citizen",
+      "created_at": "2025-10-26T10:10:44.567Z",
+      "updated_at": "2025-10-26T10:10:44.567Z"
+    },
+    {
+      "id": "1761400000020fgh890ijk",
+      "email": "nitin.oberoi@gmail.com",
+      "password": "Nitin@024",
+      "full_name": "Nitin Oberoi",
+      "role": "citizen",
+      "created_at": "2025-10-26T11:25:55.890Z",
+      "updated_at": "2025-10-26T11:25:55.890Z"
+    },
+    {
+      "id": "1761400000021ijk123lmn",
+      "email": "pooja.mehta@gmail.com",
+      "password": "Pooja@135",
+      "full_name": "Pooja Mehta",
+      "role": "citizen",
+      "created_at": "2025-10-26T12:40:11.123Z",
+      "updated_at": "2025-10-26T12:40:11.123Z"
+    },
+    {
+      "id": "1761400000022lmn456opq",
+      "email": "akash.singhal@gmail.com",
+      "password": "Akash@246",
+      "full_name": "Akash Singhal",
+      "role": "citizen",
+      "created_at": "2025-10-26T13:55:22.456Z",
+      "updated_at": "2025-10-26T13:55:22.456Z"
+    },
+    {
+      "id": "1761400000023opq789rst",
+      "email": "swati.agarwal@gmail.com",
+      "password": "Swati@357",
+      "full_name": "Swati Agarwal",
+      "role": "citizen",
+      "created_at": "2025-10-26T15:10:33.789Z",
+      "updated_at": "2025-10-26T15:10:33.789Z"
+    },
+    {
+      "id": "1761400000024rst012uvw",
+      "email": "rahul.khanna@gmail.com",
+      "password": "Rahul@468",
+      "full_name": "Rahul Khanna",
+      "role": "citizen",
+      "created_at": "2025-10-26T16:25:44.012Z",
+      "updated_at": "2025-10-26T16:25:44.012Z"
+    },
+    {
+      "id": "1761400000025uvw345xyz",
+      "email": "kiran.bedi@gmail.com",
+      "password": "Kiran@579",
+      "full_name": "Kiran Bedi",
+      "role": "citizen",
+      "created_at": "2025-10-26T17:40:55.345Z",
+      "updated_at": "2025-10-26T17:40:55.345Z"
+    },
+    {
+      "id": "1761400000026xyz678abc",
+      "email": "vishal.singh@gmail.com",
+      "password": "Vishal@680",
+      "full_name": "Vishal Singh",
+      "role": "citizen",
+      "created_at": "2025-10-26T18:55:11.678Z",
+      "updated_at": "2025-10-26T18:55:11.678Z"
+    },
+    {
+      "id": "1761400000027abc901def",
+      "email": "preeti.sharma@gmail.com",
+      "password": "Preeti@791",
+      "full_name": "Preeti Sharma",
+      "role": "citizen",
+      "created_at": "2025-10-26T20:10:22.901Z",
+      "updated_at": "2025-10-26T20:10:22.901Z"
+    },
+    {
+      "id": "1761400000028def234ghi",
+      "email": "harsh.kapoor@gmail.com",
+      "password": "Harsh@802",
+      "full_name": "Harsh Kapoor",
+      "role": "citizen",
+      "created_at": "2025-10-26T21:25:33.234Z",
+      "updated_at": "2025-10-26T21:25:33.234Z"
+    },
+    {
+      "id": "1761400000029ghi567jkl",
+      "email": "anjali.gupta@gmail.com",
+      "password": "Anjali@913",
+      "full_name": "Anjali Gupta",
+      "role": "citizen",
+      "created_at": "2025-10-26T22:40:44.567Z",
+      "updated_at": "2025-10-26T22:40:44.567Z"
+    },
+    {
+      "id": "1761401960787mvtlnkn0a",
+      "email": "test.user@example.com",
+      "password": "test123",
+      "full_name": "Test User",
+      "role": "citizen",
+      "created_at": "2025-10-25T14:19:20.787Z",
+      "updated_at": "2025-10-25T14:19:20.788Z"
+    }
+  ]
+}
