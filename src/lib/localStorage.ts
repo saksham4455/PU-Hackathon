@@ -1,10 +1,25 @@
 // Backend API service to replace localStorage functionality
 export type Profile = {
   id: string;
+  email: string;
   full_name: string;
-  role: 'citizen' | 'admin';
+  role: 'citizen' | 'super_admin' | 'department_head' | 'department_worker';
   created_at: string;
   updated_at: string;
+  reputation_points?: number;
+  badges?: string[];
+  issues_reported?: number;
+  issues_resolved?: number;
+  department_id?: string;
+  department_name?: string;
+  worker_id?: string;
+  specialization?: string;
+  manages_workers?: string[];
+  // Profile fields
+  avatar?: string;
+  phone?: string;
+  address?: string;
+  bio?: string;
 };
 
 export type User = {
@@ -67,6 +82,23 @@ export type Issue = {
   status_history?: IssueStatusHistory[]; // Track all status changes
   is_anonymous?: boolean; // Anonymous reporting
   anonymous_email?: string; // Email for anonymous reports
+
+  // Department workflow fields
+  department_id?: string;
+  department_name?: string;
+  assigned_to_worker_id?: string;
+  assigned_to_worker_name?: string;
+  assigned_by?: string;
+  assigned_at?: string;
+
+  // Solution tracking
+  before_photos?: string[];
+  after_photos?: string[];
+  solution_photos?: string[];
+  work_notes?: string;
+  work_started_at?: string;
+  work_completed_at?: string;
+
   created_at: string;
   updated_at: string;
 };

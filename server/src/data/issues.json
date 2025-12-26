@@ -4157,15 +4157,24 @@
       "priority": "medium",
       "latitude": 22.27235779487068,
       "longitude": 73.40015029714932,
-      "status": "pending",
+      "status": "resolved",
       "is_anonymous": false,
       "id": "1761482576544k999",
       "created_at": "2025-12-22T13:17:57.134921Z",
-      "updated_at": "2025-12-23T13:17:57.134921Z",
+      "updated_at": "2025-12-25T13:32:01.341Z",
       "location_address": "Juniper Lane",
       "image_path": "/uploads/issue_1642.jpg",
       "public_comments": [],
-      "status_history": []
+      "status_history": [
+        {
+          "id": "1766669521342gycdkccfg",
+          "issue_id": "1761482576544k999",
+          "old_status": "pending",
+          "new_status": "resolved",
+          "changed_at": "2025-12-25T13:32:01.342Z",
+          "comment": ""
+        }
+      ]
     },
     {
       "user_id": "1761396234484vbvmk3i07",
@@ -8010,6 +8019,92 @@
           "comment": "Issue assigned to relevant department"
         }
       ]
+    },
+    {
+      "user_id": "Divya@gmail.com",
+      "issue_type": "pothole",
+      "description": "Very big pothole",
+      "photos": [],
+      "priority": "critical",
+      "latitude": 28.7227983,
+      "longitude": 77.1658918,
+      "status": "pending",
+      "is_anonymous": false,
+      "id": "17666879813844mcr76gbl",
+      "created_at": "2025-12-25T18:39:41.385Z",
+      "updated_at": "2025-12-25T18:39:41.385Z",
+      "public_comments": [],
+      "status_history": []
+    },
+    {
+      "user_id": "Divya@gmail.com",
+      "issue_type": "pothole",
+      "description": "pothole",
+      "photos": [],
+      "priority": "high",
+      "latitude": 28.7227893,
+      "longitude": 77.165889,
+      "status": "pending",
+      "is_anonymous": false,
+      "department_id": "dept_road_001",
+      "department_name": "Road Maintenance",
+      "id": "17666883515395q9bahh59",
+      "created_at": "2025-12-25T18:45:51.545Z",
+      "updated_at": "2025-12-25T18:45:51.545Z",
+      "public_comments": [],
+      "status_history": []
+    },
+    {
+      "user_id": "Divya@gmail.com",
+      "issue_type": "pothole",
+      "description": "big potholes",
+      "photos": [],
+      "priority": "high",
+      "latitude": 28.7227898,
+      "longitude": 77.1658904,
+      "status": "pending",
+      "is_anonymous": false,
+      "department_id": "dept_road_001",
+      "department_name": "Road Maintenance",
+      "id": "1766688638760pw8tmkd7q",
+      "created_at": "2025-12-25T18:50:38.760Z",
+      "updated_at": "2025-12-25T18:50:38.760Z",
+      "public_comments": [],
+      "status_history": []
+    },
+    {
+      "user_id": "Divya@gmail.com",
+      "issue_type": "pothole",
+      "description": "potholes",
+      "photos": [],
+      "priority": "critical",
+      "latitude": 28.7228055,
+      "longitude": 77.1658894,
+      "status": "pending",
+      "is_anonymous": false,
+      "id": "176668895443502uuadl2n",
+      "created_at": "2025-12-25T18:55:54.436Z",
+      "updated_at": "2025-12-25T18:55:54.436Z",
+      "public_comments": [],
+      "status_history": []
+    },
+    {
+      "user_id": "test@example.com",
+      "issue_type": "pothole",
+      "description": "Biiiiiiiig potholes",
+      "photos": [],
+      "priority": "critical",
+      "latitude": 28.7227999,
+      "longitude": 77.1658889,
+      "status": "pending",
+      "is_anonymous": false,
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance",
+      "id": "17666898912977xf8wueha",
+      "created_at": "2025-12-25T19:11:31.300Z",
+      "updated_at": "2025-12-25T19:11:31.301Z",
+      "public_comments": [],
+      "status_history": []
     }
   ]
 }

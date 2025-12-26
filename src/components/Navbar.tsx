@@ -23,7 +23,7 @@ export function Navbar() {
   };
 
   return (
-    <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-white/20 shadow-sm transition-all duration-300">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center h-14">
           {/* Logo Section */}
@@ -44,7 +44,7 @@ export function Navbar() {
                 to="/home"
                 className={`relative px-4 py-4 text-sm font-medium transition-colors ${isActive('/home')
                   ? 'text-blue-600'
-                  : 'text-gray-700 hover:text-gray-900'
+                  : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50/50 rounded-lg'
                   }`}
               >
                 Home
@@ -63,7 +63,7 @@ export function Navbar() {
                       : 'text-gray-700 hover:text-gray-900'
                       }`}
                   >
-                    Report Issue
+                    Report an Issue
                     {isActive('/report') && (
                       <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600"></span>
                     )}
@@ -76,7 +76,7 @@ export function Navbar() {
                       : 'text-gray-700 hover:text-gray-900'
                       }`}
                   >
-                    My Complaints
+                    Track Progress
                     {isActive('/my-complaints') && (
                       <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600"></span>
                     )}
@@ -84,7 +84,7 @@ export function Navbar() {
                 </>
               )}
 
-              {user && profile?.role === 'admin' && (
+              {user && profile?.role === 'super_admin' && (
                 <>
                   <span className="text-gray-300">|</span>
                   <Link
@@ -151,7 +151,7 @@ export function Navbar() {
                 >
                   {profile?.full_name}
                 </Link>
-                {profile?.role === 'admin' && (
+                {profile?.role === 'super_admin' && (
                   <span className="px-2 py-0.5 bg-purple-600 text-white text-xs rounded-full font-medium">
                     Admin
                   </span>
@@ -199,7 +199,7 @@ export function Navbar() {
                       : 'text-gray-700 hover:bg-gray-50'
                       }`}
                   >
-                    Report Issue
+                    Report an Issue
                   </Link>
                   <Link
                     to="/my-complaints"
@@ -209,12 +209,12 @@ export function Navbar() {
                       : 'text-gray-700 hover:bg-gray-50'
                       }`}
                   >
-                    My Complaints
+                    Track Progress
                   </Link>
                 </>
               )}
 
-              {user && profile?.role === 'admin' && (
+              {user && profile?.role === 'super_admin' && (
                 <>
                   <Link
                     to="/admin"
@@ -262,7 +262,7 @@ export function Navbar() {
                     >
                       <User className="w-4 h-4" />
                       <span>{profile?.full_name}</span>
-                      {profile?.role === 'admin' && (
+                      {profile?.role === 'super_admin' && (
                         <span className="ml-auto px-2 py-0.5 bg-purple-600 text-white text-xs rounded-full font-medium">
                           Admin
                         </span>

@@ -22,7 +22,7 @@ export function UserProfilePage() {
 
   const handleUpdateProfile = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!user) return;
 
     setLoading(true);
@@ -31,11 +31,11 @@ export function UserProfilePage() {
 
     try {
       const updates: { full_name?: string; email?: string } = {};
-      
+
       if (fullName !== user.full_name) {
         updates.full_name = fullName;
       }
-      
+
       if (email !== user.email) {
         updates.email = email;
       }
@@ -86,7 +86,7 @@ export function UserProfilePage() {
             <ArrowLeft className="w-5 h-5 mr-2" />
             Back to Dashboard
           </button>
-          
+
           <h1 className="text-4xl font-bold text-gray-900 mb-2">My Profile</h1>
           <p className="text-gray-600">Manage your account information</p>
         </div>
@@ -101,26 +101,25 @@ export function UserProfilePage() {
                 </div>
                 <h2 className="text-xl font-semibold text-gray-900 mb-1">{user.full_name}</h2>
                 <p className="text-gray-600 mb-4">{user.email}</p>
-                
+
                 <div className="space-y-3 text-sm">
                   <div className="flex items-center justify-between">
                     <span className="text-gray-500">Role:</span>
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                      user.role === 'admin' 
-                        ? 'bg-red-100 text-red-700' 
-                        : 'bg-green-100 text-green-700'
-                    }`}>
-                      {user.role === 'admin' ? 'Administrator' : 'Citizen'}
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${user.role === 'super_admin'
+                        ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white'
+                        : 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'
+                      }`}>
+                      {user.role === 'super_admin' ? 'Super Administrator' : 'Citizen'}
                     </span>
                   </div>
-                  
+
                   <div className="flex items-center justify-between">
                     <span className="text-gray-500">Member since:</span>
                     <span className="text-gray-900">
                       {new Date(user.created_at).toLocaleDateString()}
                     </span>
                   </div>
-                  
+
                   <div className="flex items-center justify-between">
                     <span className="text-gray-500">Last updated:</span>
                     <span className="text-gray-900">
@@ -197,7 +196,7 @@ export function UserProfilePage() {
                     </div>
                     <div className="flex items-center">
                       <User className="w-4 h-4 mr-2" />
-                      <span>Account type: {user.role === 'admin' ? 'Administrator' : 'Citizen'}</span>
+                      <span>Account type: {user.role === 'super_admin' ? 'Super Administrator' : user.role === 'department_head' ? 'Department Head' : user.role === 'department_worker' ? 'Department Worker' : 'Citizen'}</span>
                     </div>
                   </div>
                 </div>

@@ -2,20 +2,27 @@ import { createContext, useContext, useEffect, useState } from 'react';
 import { Profile } from '../lib/localStorage';
 import usersData from '../data/users.json';
 import adminsData from '../data/admins.json';
+import departmentHeadsData from '../data/department_heads.json';
+import departmentWorkersData from '../data/department_workers.json';
+
+type UserRole = 'citizen' | 'super_admin' | 'department_head' | 'department_worker';
 
 interface User {
   id: string;
   email: string;
   full_name: string;
-  role: 'citizen' | 'admin';
+  role: UserRole;
   created_at: string;
   updated_at: string;
-  password: string;
+  department_id?: string;
+  department_name?: string;
+  worker_id?: string;
+  specialization?: string;
 }
 
-// Type guard to check if a user has the correct role type
-function isValidRole(role: string): role is 'citizen' | 'admin' {
-  return role === 'citizen' || role === 'admin';
+// Type guard to check if a user has a valid role type
+function isValidRole(role: string): role is UserRole {
+  return ['citizen', 'super_admin', 'department_head', 'department_worker'].includes(role);
 }
 
 type AuthContextType = {
@@ -23,7 +30,7 @@ type AuthContextType = {
   profile: Profile | null;
   loading: boolean;
   signUp: (email: string, password: string, fullName: string) => Promise<{ error: Error | null }>;
-  signIn: (email: string, password: string) => Promise<{ error: Error | null }>;
+  signIn: (email: string, password: string, role?: UserRole) => Promise<{ error: Error | null }>;
   signOut: () => Promise<void>;
 };
 
@@ -57,14 +64,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       const newUser = {
         id: `user_${Date.now()}`,
         email,
-        password,
         full_name: fullName,
         role: 'citizen' as const,
         created_at: new Date().toISOString(),
         updated_at: new Date().toISOString()
       };
 
-      // Store user in local storage
+      // Store user in local storage (without password)
       localStorage.setItem('currentUser', JSON.stringify(newUser));
       setUser(newUser);
       setProfile(newUser);
@@ -76,29 +82,61 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
-  const signIn = async (email: string, password: string) => {
+  const signIn = async (email: string, password: string, requestedRole?: UserRole) => {
     try {
-      // Check admin credentials
-      const admin = adminsData.admins.find(a => a.email === email && a.password === password);
-      if (admin && isValidRole(admin.role)) {
-        const validAdmin = { ...admin, role: admin.role };
-        localStorage.setItem('currentUser', JSON.stringify(validAdmin));
-        setUser(validAdmin);
-        setProfile(validAdmin);
-        return { error: null };
+      let foundUser: any = null;
+      let userRole: UserRole | null = null;
+
+      // Check based on requested role or search all
+      if (!requestedRole || requestedRole === 'super_admin') {
+        const admin = adminsData.admins.find(a => a.email === email && a.password === password);
+        if (admin && isValidRole(admin.role)) {
+          foundUser = admin;
+          userRole = admin.role as UserRole;
+        }
       }
 
-      // Check user credentials
-      const user = usersData.users.find(u => u.email === email && u.password === password);
-      if (user && isValidRole(user.role)) {
-        const validUser = { ...user, role: user.role };
-        localStorage.setItem('currentUser', JSON.stringify(validUser));
-        setUser(validUser);
-        setProfile(validUser);
-        return { error: null };
+      if (!foundUser && (!requestedRole || requestedRole === 'department_head')) {
+        const head = departmentHeadsData.department_heads.find(h => h.email === email && h.password === password);
+        if (head && isValidRole(head.role)) {
+          foundUser = head;
+          userRole = head.role as UserRole;
+        }
       }
 
-      throw new Error('Invalid email or password');
+      if (!foundUser && (!requestedRole || requestedRole === 'department_worker')) {
+        const worker = departmentWorkersData.department_workers.find(w => w.email === email && w.password === password);
+        if (worker && isValidRole(worker.role)) {
+          foundUser = worker;
+          userRole = worker.role as UserRole;
+        }
+      }
+
+      if (!foundUser && (!requestedRole || requestedRole === 'citizen')) {
+        const citizen = usersData.users.find(u => u.email === email && u.password === password);
+        if (citizen && isValidRole(citizen.role)) {
+          foundUser = citizen;
+          userRole = citizen.role as UserRole;
+        }
+      }
+
+      if (!foundUser || !userRole) {
+        throw new Error('Invalid email or password');
+      }
+
+      // If a specific role was requested, verify it matches
+      if (requestedRole && userRole !== requestedRole) {
+        throw new Error(`Invalid credentials for ${requestedRole} role`);
+      }
+
+      // Create user object without password
+      const { password: _, ...userWithoutPassword } = foundUser;
+      const validUser = { ...userWithoutPassword, role: userRole };
+
+      localStorage.setItem('currentUser', JSON.stringify(validUser));
+      setUser(validUser);
+      setProfile(validUser);
+      return { error: null };
     } catch (error) {
       console.error('Sign in error:', error);
       return { error: error as Error };

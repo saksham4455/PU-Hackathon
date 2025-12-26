@@ -21,7 +21,13 @@ dist-ssr
 *.sln
 *.sw?
 .env
+.env.local
 
 # User uploads
 uploads/
 uploads/secure/
+
+# Firebase credentials (NEVER commit these!)
+*-firebase-adminsdk-*.json
+serviceAccountKey.json
+firebase-adminsdk.json

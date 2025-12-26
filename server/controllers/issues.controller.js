@@ -11,7 +11,7 @@ const { ISSUES_FILE } = getDataFilePaths();
  */
 export async function getAllIssues(req, res) {
     try {
-        const issuesData = readJsonFile(ISSUES_FILE);
+        const issuesData = await readJsonFile(ISSUES_FILE);
         if (!issuesData) {
             return res.status(500).json({ error: 'Failed to read issues' });
         }
@@ -28,7 +28,7 @@ export async function getAllIssues(req, res) {
 export async function getIssueById(req, res) {
     try {
         const { id } = req.params;
-        const issuesData = readJsonFile(ISSUES_FILE);
+        const issuesData = await readJsonFile(ISSUES_FILE);
 
         if (!issuesData) {
             return res.status(500).json({ error: 'Failed to read issues' });
@@ -58,7 +58,7 @@ export async function createIssue(req, res) {
             return res.status(400).json({ error: 'Missing required fields' });
         }
 
-        const issuesData = readJsonFile(ISSUES_FILE);
+        const issuesData = await readJsonFile(ISSUES_FILE);
         if (!issuesData) {
             return res.status(500).json({ error: 'Failed to read issues' });
         }
@@ -75,7 +75,7 @@ export async function createIssue(req, res) {
 
         issuesData.issues.push(newIssue);
 
-        if (writeJsonFile(ISSUES_FILE, issuesData)) {
+        if (await writeJsonFile(ISSUES_FILE, issuesData)) {
             res.json({ issue: newIssue, message: 'Issue created successfully' });
         } else {
             res.status(500).json({ error: 'Failed to save issue' });
@@ -87,14 +87,14 @@ export async function createIssue(req, res) {
 }
 
 /**
- * Update issue status
+ * Update status
  */
 export async function updateStatus(req, res) {
     try {
         const { id } = req.params;
         const { status, changedBy, changedByName, comment } = req.body;
 
-        const issuesData = readJsonFile(ISSUES_FILE);
+        const issuesData = await readJsonFile(ISSUES_FILE);
         if (!issuesData) {
             return res.status(500).json({ error: 'Failed to read issues' });
         }
@@ -127,7 +127,7 @@ export async function updateStatus(req, res) {
             comment: comment || ''
         });
 
-        if (writeJsonFile(ISSUES_FILE, issuesData)) {
+        if (await writeJsonFile(ISSUES_FILE, issuesData)) {
             res.json({ issue, message: 'Status updated successfully' });
         } else {
             res.status(500).json({ error: 'Failed to save issue' });
@@ -146,7 +146,7 @@ export async function updateAdminNotes(req, res) {
         const { id } = req.params;
         const { adminNotes } = req.body;
 
-        const issuesData = readJsonFile(ISSUES_FILE);
+        const issuesData = await readJsonFile(ISSUES_FILE);
         if (!issuesData) {
             return res.status(500).json({ error: 'Failed to read issues' });
         }
@@ -159,7 +159,7 @@ export async function updateAdminNotes(req, res) {
         issuesData.issues[issueIndex].admin_notes = adminNotes;
         issuesData.issues[issueIndex].updated_at = new Date().toISOString();
 
-        if (writeJsonFile(ISSUES_FILE, issuesData)) {
+        if (await writeJsonFile(ISSUES_FILE, issuesData)) {
             res.json({ issue: issuesData.issues[issueIndex], message: 'Admin notes updated successfully' });
         } else {
             res.status(500).json({ error: 'Failed to save issue' });
@@ -178,7 +178,7 @@ export async function addComment(req, res) {
         const { id } = req.params;
         const { comment, authorType, authorId, authorName } = req.body;
 
-        const issuesData = readJsonFile(ISSUES_FILE);
+        const issuesData = await readJsonFile(ISSUES_FILE);
         if (!issuesData) {
             return res.status(500).json({ error: 'Failed to read issues' });
         }
@@ -205,7 +205,7 @@ export async function addComment(req, res) {
         issuesData.issues[issueIndex].public_comments.push(newComment);
         issuesData.issues[issueIndex].updated_at = new Date().toISOString();
 
-        if (writeJsonFile(ISSUES_FILE, issuesData)) {
+        if (await writeJsonFile(ISSUES_FILE, issuesData)) {
             res.json({ comment: newComment, message: 'Comment added successfully' });
         } else {
             res.status(500).json({ error: 'Failed to save comment' });

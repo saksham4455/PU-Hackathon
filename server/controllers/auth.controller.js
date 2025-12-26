@@ -13,7 +13,7 @@ export async function signup(req, res) {
     try {
         const { email, password, fullName } = req.body;
 
-        const usersData = readJsonFile(USERS_FILE);
+        const usersData = await readJsonFile(USERS_FILE);
         if (!usersData) {
             return res.status(500).json({ error: 'Failed to read user data' });
         }
@@ -41,7 +41,7 @@ export async function signup(req, res) {
 
         usersData.users.push(newUser);
 
-        if (writeJsonFile(USERS_FILE, usersData)) {
+        if (await writeJsonFile(USERS_FILE, usersData)) {
             res.json({ user: newUser, message: 'User created successfully' });
         } else {
             res.status(500).json({ error: 'Failed to save user data' });
@@ -59,8 +59,8 @@ export async function login(req, res) {
     try {
         const { email, password } = req.body;
 
-        const usersData = readJsonFile(USERS_FILE);
-        const adminsData = readJsonFile(getDataFilePaths().ADMINS_FILE);
+        const usersData = await readJsonFile(USERS_FILE);
+        const adminsData = await readJsonFile(getDataFilePaths().ADMINS_FILE);
 
         // Check in users
         const user = usersData?.users.find(u => u.email === email && u.password === password);

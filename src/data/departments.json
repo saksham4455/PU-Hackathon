@@ -1,0 +1,223 @@
+{
+    "departments": [
+        {
+            "id": "dept-001",
+            "name": "Road Maintenance",
+            "description": "Handles potholes and broken sidewalks",
+            "head_id": "head-001",
+            "worker_ids": [
+                "worker-001",
+                "worker-002",
+                "worker-003"
+            ],
+            "issue_types": [
+                "pothole",
+                "broken_sidewalk"
+            ],
+            "contact_email": "road@city.gov",
+            "contact_phone": "+91-9876543210",
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z",
+            "total_issues_assigned": 0,
+            "total_issues_resolved": 0,
+            "average_resolution_time": 0,
+            "efficiency_score": 0
+        },
+        {
+            "id": "dept-002",
+            "name": "Sanitation",
+            "description": "Handles garbage collection and disposal",
+            "head_id": "head-002",
+            "worker_ids": [
+                "worker-004",
+                "worker-005",
+                "worker-006"
+            ],
+            "issue_types": [
+                "garbage"
+            ],
+            "contact_email": "sanitation@city.gov",
+            "contact_phone": "+91-9876543211",
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z",
+            "total_issues_assigned": 0,
+            "total_issues_resolved": 0,
+            "average_resolution_time": 0,
+            "efficiency_score": 0
+        },
+        {
+            "id": "dept-003",
+            "name": "Electrical Services",
+            "description": "Handles streetlight issues",
+            "head_id": "head-003",
+            "worker_ids": [
+                "worker-007",
+                "worker-008",
+                "worker-009"
+            ],
+            "issue_types": [
+                "streetlight"
+            ],
+            "contact_email": "electrical@city.gov",
+            "contact_phone": "+91-9876543212",
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z",
+            "total_issues_assigned": 0,
+            "total_issues_resolved": 0,
+            "average_resolution_time": 0,
+            "efficiency_score": 0
+        },
+        {
+            "id": "dept-004",
+            "name": "Water & Sewage",
+            "description": "Handles water leaks and drainage issues",
+            "head_id": "head-004",
+            "worker_ids": [
+                "worker-010",
+                "worker-011",
+                "worker-012"
+            ],
+            "issue_types": [
+                "water_leak",
+                "drainage"
+            ],
+            "contact_email": "water@city.gov",
+            "contact_phone": "+91-9876543213",
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z",
+            "total_issues_assigned": 0,
+            "total_issues_resolved": 0,
+            "average_resolution_time": 0,
+            "efficiency_score": 0
+        },
+        {
+            "id": "dept-005",
+            "name": "Traffic Management",
+            "description": "Handles traffic signals and parking violations",
+            "head_id": "head-005",
+            "worker_ids": [
+                "worker-013",
+                "worker-014",
+                "worker-015"
+            ],
+            "issue_types": [
+                "traffic_signal",
+                "parking_violation"
+            ],
+            "contact_email": "traffic@city.gov",
+            "contact_phone": "+91-9876543214",
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z",
+            "total_issues_assigned": 0,
+            "total_issues_resolved": 0,
+            "average_resolution_time": 0,
+            "efficiency_score": 0
+        },
+        {
+            "id": "dept-006",
+            "name": "Signage & Markings",
+            "description": "Handles street signs and road markings",
+            "head_id": "head-006",
+            "worker_ids": [
+                "worker-016",
+                "worker-017"
+            ],
+            "issue_types": [
+                "street_sign"
+            ],
+            "contact_email": "signage@city.gov",
+            "contact_phone": "+91-9876543215",
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z",
+            "total_issues_assigned": 0,
+            "total_issues_resolved": 0,
+            "average_resolution_time": 0,
+            "efficiency_score": 0
+        },
+        {
+            "id": "dept-007",
+            "name": "Parks & Horticulture",
+            "description": "Handles tree maintenance and park issues",
+            "head_id": "head-007",
+            "worker_ids": [
+                "worker-018",
+                "worker-019",
+                "worker-020"
+            ],
+            "issue_types": [
+                "tree_maintenance"
+            ],
+            "contact_email": "parks@city.gov",
+            "contact_phone": "+91-9876543216",
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z",
+            "total_issues_assigned": 0,
+            "total_issues_resolved": 0,
+            "average_resolution_time": 0,
+            "efficiency_score": 0
+        },
+        {
+            "id": "dept-008",
+            "name": "Public Safety",
+            "description": "Handles noise complaints and public safety issues",
+            "head_id": "head-008",
+            "worker_ids": [
+                "worker-021",
+                "worker-022"
+            ],
+            "issue_types": [
+                "noise_complaint"
+            ],
+            "contact_email": "safety@city.gov",
+            "contact_phone": "+91-9876543217",
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z",
+            "total_issues_assigned": 0,
+            "total_issues_resolved": 0,
+            "average_resolution_time": 0,
+            "efficiency_score": 0
+        },
+        {
+            "id": "dept-009",
+            "name": "Anti-Vandalism",
+            "description": "Handles graffiti and vandalism issues",
+            "head_id": "head-009",
+            "worker_ids": [
+                "worker-023",
+                "worker-024"
+            ],
+            "issue_types": [
+                "graffiti"
+            ],
+            "contact_email": "vandalism@city.gov",
+            "contact_phone": "+91-9876543218",
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z",
+            "total_issues_assigned": 0,
+            "total_issues_resolved": 0,
+            "average_resolution_time": 0,
+            "efficiency_score": 0
+        },
+        {
+            "id": "dept-010",
+            "name": "General Services",
+            "description": "Handles miscellaneous and other issues",
+            "head_id": "head-010",
+            "worker_ids": [
+                "worker-025",
+                "worker-026"
+            ],
+            "issue_types": [
+                "other"
+            ],
+            "contact_email": "general@city.gov",
+            "contact_phone": "+91-9876543219",
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z",
+            "total_issues_assigned": 0,
+            "total_issues_resolved": 0,
+            "average_resolution_time": 0,
+            "efficiency_score": 0
+        }
+    ]
+}

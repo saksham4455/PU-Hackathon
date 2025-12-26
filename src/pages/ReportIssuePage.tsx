@@ -11,15 +11,15 @@ export function ReportIssuePage() {
   const [issueType, setIssueType] = useState('pothole');
   const [description, setDescription] = useState('');
   const [priority, setPriority] = useState<'low' | 'medium' | 'high' | 'critical'>('medium');
-  
+
   // Multiple photos support
   const [photos, setPhotos] = useState<File[]>([]);
   const [photoPreviews, setPhotoPreviews] = useState<string[]>([]);
-  
+
   // Video support
   const [video, setVideo] = useState<File | null>(null);
   const [videoPreview, setVideoPreview] = useState<string>('');
-  
+
   // Voice note support
   const [isRecording, setIsRecording] = useState(false);
   const [voiceNote, setVoiceNote] = useState<string>('');
@@ -27,11 +27,11 @@ export function ReportIssuePage() {
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const audioChunksRef = useRef<Blob[]>([]);
   const recordingIntervalRef = useRef<NodeJS.Timeout | null>(null);
-  
+
   // Anonymous reporting
   const [isAnonymous, setIsAnonymous] = useState(false);
   const [anonymousEmail, setAnonymousEmail] = useState('');
-  
+
   const [latitude, setLatitude] = useState<number>(40.7128);
   const [longitude, setLongitude] = useState<number>(-74.006);
   const [locationSet, setLocationSet] = useState(false);
@@ -53,7 +53,7 @@ export function ReportIssuePage() {
   // Multiple photos handling
   const handlePhotosChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(e.target.files || []);
-    
+
     // Validate file count
     if (photos.length + files.length > 5) {
       setError('Maximum 5 photos allowed');
@@ -101,7 +101,7 @@ export function ReportIssuePage() {
         setError('Video must be under 10MB');
         return;
       }
-      
+
       setVideo(file);
       const reader = new FileReader();
       reader.onloadend = () => {
@@ -209,7 +209,7 @@ export function ReportIssuePage() {
     try {
       // Upload all files to local server
       const fileUrls: string[] = [];
-      
+
       // Upload photos
       if (photos.length > 0) {
         const photoUrls = await Promise.all(
@@ -217,13 +217,13 @@ export function ReportIssuePage() {
         );
         fileUrls.push(...photoUrls);
       }
-      
+
       // Upload video
       if (video) {
         const videoUrl = await localStorageService.uploadFile(video);
         fileUrls.push(videoUrl);
       }
-      
+
       // Upload voice note
       if (voiceNote) {
         const blob = await fetch(voiceNote).then(r => r.blob());
@@ -231,6 +231,28 @@ export function ReportIssuePage() {
         const voiceNoteUrl = await localStorageService.uploadFile(file);
         fileUrls.push(voiceNoteUrl);
       }
+
+      // Map issue type to department (matching department_heads.json IDs)
+      const getDepartmentForIssueType = (issueType: string): { id: string; name: string } => {
+        const mapping: Record<string, { id: string; name: string }> = {
+          'pothole': { id: 'dept-001', name: 'Road Maintenance' },
+          'broken_sidewalk': { id: 'dept-001', name: 'Road Maintenance' },
+          'garbage': { id: 'dept-002', name: 'Sanitation' },
+          'streetlight': { id: 'dept-003', name: 'Electrical Services' },
+          'water_leak': { id: 'dept-004', name: 'Water & Sewage' },
+          'drainage': { id: 'dept-004', name: 'Water & Sewage' },
+          'traffic_signal': { id: 'dept-005', name: 'Traffic Management' },
+          'parking_violation': { id: 'dept-005', name: 'Traffic Management' },
+          'street_sign': { id: 'dept-006', name: 'Signage & Markings' },
+          'tree_maintenance': { id: 'dept-007', name: 'Parks & Horticulture' },
+          'graffiti': { id: 'dept-009', name: 'Anti-Vandalism' },
+          'noise_complaint': { id: 'dept-008', name: 'Public Safety' },
+          'other': { id: 'dept-010', name: 'General Services' }
+        };
+        return mapping[issueType] || { id: 'dept-010', name: 'General Services' };
+      };
+
+      const department = getDepartmentForIssueType(issueType);
 
       // Create issue data for backend API
       const issueData: Omit<Issue, 'id' | 'created_at' | 'updated_at'> = {
@@ -247,10 +269,12 @@ export function ReportIssuePage() {
         status: 'pending' as const,
         is_anonymous: isAnonymous,
         anonymous_email: isAnonymous ? anonymousEmail : undefined,
+        department_id: department.id,
+        department_name: department.name,
       };
 
       // Submit issue to backend API
-      const { issue, error: createError } = await localStorageService.createIssue(issueData);
+      const { error: createError } = await localStorageService.createIssue(issueData);
 
       if (createError) throw createError;
 
@@ -291,51 +315,65 @@ export function ReportIssuePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex-grow">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">Report an Issue</h1>
-          <p className="text-gray-600">Help improve your city by reporting problems</p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 flex-grow py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 left-0 w-full h-96 bg-gradient-to-br from-blue-600/10 to-purple-600/10 -skew-y-6 transform origin-top-left z-0 pointer-events-none"></div>
+
+      <div className="max-w-4xl mx-auto relative z-10">
+        <div className="text-center mb-10 animate-fade-in">
+          <h1 className="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-4">
+            Report an <span className="text-gradient">Issue</span>
+          </h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Help us maintain our city standards. Your detailed report helps us take faster action.
+          </p>
         </div>
 
         {success && (
-          <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-start space-x-3 text-green-700">
-            <CheckCircle className="w-6 h-6 flex-shrink-0" />
+          <div className="mb-8 p-6 bg-green-50/90 backdrop-blur-md border border-green-200 rounded-2xl flex items-center space-x-4 text-green-800 shadow-lg animate-fade-in">
+            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <CheckCircle className="w-6 h-6 text-green-600" />
+            </div>
             <div>
-              <p className="font-medium">Issue reported successfully!</p>
-              <p className="text-sm">Redirecting to your complaints...</p>
+              <h3 className="font-bold text-lg">Report Submitted Successfully!</h3>
+              <p className="text-green-700">redirecting you to your complaints dashboard...</p>
             </div>
           </div>
         )}
 
         {error && (
-          <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-start space-x-3 text-red-700">
-            <AlertCircle className="w-6 h-6 flex-shrink-0" />
-            <span>{error}</span>
+          <div className="mb-8 p-6 bg-red-50/90 backdrop-blur-md border border-red-200 rounded-2xl flex items-center space-x-4 text-red-800 shadow-lg animate-fade-in">
+            <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <AlertCircle className="w-6 h-6 text-red-600" />
+            </div>
+            <div>
+              <h3 className="font-bold text-lg">Submission Failed</h3>
+              <p className="text-red-700">{error}</p>
+            </div>
           </div>
         )}
 
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="glass-panel rounded-3xl p-8 md:p-10 animate-slide-up">
+          <form onSubmit={handleSubmit} className="space-y-8">
             {/* Anonymous Reporting Option */}
             {!user && (
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                <div className="flex items-center space-x-2 mb-3">
+              <div className="bg-blue-50/50 backdrop-blur-sm border border-blue-100 rounded-2xl p-6 transition-all duration-300 hover:bg-blue-50">
+                <div className="flex items-center space-x-3 mb-4">
                   <input
                     type="checkbox"
                     id="anonymous"
                     checked={isAnonymous}
                     onChange={(e) => setIsAnonymous(e.target.checked)}
-                    className="rounded"
+                    className="w-5 h-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                   />
-                  <label htmlFor="anonymous" className="text-sm font-medium text-blue-800">
+                  <label htmlFor="anonymous" className="text-lg font-medium text-gray-900 cursor-pointer">
                     Report anonymously
                   </label>
                 </div>
                 {isAnonymous && (
-                  <div>
-                    <label htmlFor="anonymousEmail" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email for updates (required for anonymous reports)
+                  <div className="animate-fade-in pl-8">
+                    <label htmlFor="anonymousEmail" className="block text-sm font-semibold text-gray-700 mb-2">
+                      Email for updates <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="email"
@@ -343,7 +381,7 @@ export function ReportIssuePage() {
                       value={anonymousEmail}
                       onChange={(e) => setAnonymousEmail(e.target.value)}
                       required={isAnonymous}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-3 bg-white/70 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -351,54 +389,66 @@ export function ReportIssuePage() {
               </div>
             )}
 
-            {/* Issue Type */}
-            <div>
-              <label htmlFor="issueType" className="block text-sm font-medium text-gray-700 mb-2">
-                Issue Type
-              </label>
-              <select
-                id="issueType"
-                value={issueType}
-                onChange={(e) => setIssueType(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
-                <option value="pothole">Pothole</option>
-                <option value="garbage">Garbage Collection</option>
-                <option value="streetlight">Streetlight Failure</option>
-                <option value="water_leak">Water Leak</option>
-                <option value="broken_sidewalk">Broken Sidewalk</option>
-                <option value="traffic_signal">Traffic Signal Issue</option>
-                <option value="street_sign">Damaged/Missing Street Sign</option>
-                <option value="drainage">Drainage Problem</option>
-                <option value="tree_maintenance">Tree Maintenance</option>
-                <option value="graffiti">Graffiti/Vandalism</option>
-                <option value="noise_complaint">Noise Complaint</option>
-                <option value="parking_violation">Parking Violation</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Issue Type */}
+              <div className="space-y-2">
+                <label htmlFor="issueType" className="block text-sm font-semibold text-gray-700">
+                  Issue Type
+                </label>
+                <div className="relative">
+                  <select
+                    id="issueType"
+                    value={issueType}
+                    onChange={(e) => setIssueType(e.target.value)}
+                    className="w-full px-4 py-3 bg-white/70 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none transition-all hover:bg-white"
+                  >
+                    <option value="pothole">Pothole</option>
+                    <option value="garbage">Garbage Collection</option>
+                    <option value="streetlight">Streetlight Failure</option>
+                    <option value="water_leak">Water Leak</option>
+                    <option value="broken_sidewalk">Broken Sidewalk</option>
+                    <option value="traffic_signal">Traffic Signal Issue</option>
+                    <option value="street_sign">Damaged/Missing Street Sign</option>
+                    <option value="drainage">Drainage Problem</option>
+                    <option value="tree_maintenance">Tree Maintenance</option>
+                    <option value="graffiti">Graffiti/Vandalism</option>
+                    <option value="noise_complaint">Noise Complaint</option>
+                    <option value="parking_violation">Parking Violation</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <div className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-gray-500">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                  </div>
+                </div>
+              </div>
 
-            {/* Priority Level */}
-            <div>
-              <label htmlFor="priority" className="block text-sm font-medium text-gray-700 mb-2">
-                Priority Level
-              </label>
-              <select
-                id="priority"
-                value={priority}
-                onChange={(e) => setPriority(e.target.value as Issue['priority'])}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
-                <option value="low">Low - Minor inconvenience</option>
-                <option value="medium">Medium - Moderate impact</option>
-                <option value="high">High - Significant impact</option>
-                <option value="critical">Critical - Safety hazard</option>
-              </select>
+              {/* Priority Level */}
+              <div className="space-y-2">
+                <label htmlFor="priority" className="block text-sm font-semibold text-gray-700">
+                  Priority Level
+                </label>
+                <div className="relative">
+                  <select
+                    id="priority"
+                    value={priority}
+                    onChange={(e) => setPriority(e.target.value as Issue['priority'])}
+                    className="w-full px-4 py-3 bg-white/70 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none transition-all hover:bg-white"
+                  >
+                    <option value="low">Low - Minor inconvenience</option>
+                    <option value="medium">Medium - Moderate impact</option>
+                    <option value="high">High - Significant impact</option>
+                    <option value="critical">Critical - Safety hazard</option>
+                  </select>
+                  <div className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-gray-500">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Description */}
-            <div>
-              <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-2">
+            <div className="space-y-2">
+              <label htmlFor="description" className="block text-sm font-semibold text-gray-700">
                 Description
               </label>
               <textarea
@@ -406,195 +456,206 @@ export function ReportIssuePage() {
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 required
-                rows={4}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Please provide details about the issue..."
+                rows={5}
+                className="w-full px-4 py-3 bg-white/70 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all hover:bg-white resize-none"
+                placeholder="Please describe the issue in detail. Mention specific landmarks if possible..."
               />
             </div>
 
-            {/* Multiple Photos */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Photos (Optional - Up to 5 photos, max 10MB total)
-              </label>
-              <div className="flex items-center space-x-4 mb-4">
-                <label className="flex items-center space-x-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition cursor-pointer">
-                  <Camera className="w-5 h-5" />
-                  <span>Add Photos</span>
-                  <input
-                    type="file"
-                    accept="image/*"
-                    multiple
-                    onChange={handlePhotosChange}
-                    className="hidden"
-                    disabled={photos.length >= 5}
-                  />
-                </label>
-                <span className="text-sm text-gray-600">
-                  {photos.length}/5 photos ({Math.round(getTotalPhotosSize() / 1024 / 1024 * 100) / 100}MB)
-                </span>
+            {/* Media Upload Section */}
+            <div className="space-y-6 pt-4 border-t border-gray-100">
+              <h3 className="text-lg font-bold text-gray-900">Media Evidence</h3>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* Photos */}
+                <div className="space-y-3">
+                  <label className="block text-sm font-semibold text-gray-700">
+                    Photos (Max 5)
+                  </label>
+                  <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-gray-300 rounded-xl hover:border-blue-500 hover:bg-blue-50/50 transition-all cursor-pointer group bg-white/50">
+                    <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                      <Camera className="w-8 h-8 text-gray-400 group-hover:text-blue-500 mb-2 transition-colors" />
+                      <p className="text-sm text-gray-500 group-hover:text-blue-600 font-medium">Add Photos</p>
+                    </div>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      multiple
+                      onChange={handlePhotosChange}
+                      className="hidden"
+                      disabled={photos.length >= 5}
+                    />
+                  </label>
+                  <p className="text-xs text-center text-gray-500">
+                    {photos.length}/5 uploaded ({Math.round(getTotalPhotosSize() / 1024 / 1024 * 100) / 100}MB)
+                  </p>
+                </div>
+
+                {/* Video */}
+                <div className="space-y-3">
+                  <label className="block text-sm font-semibold text-gray-700">
+                    Video (Optional)
+                  </label>
+                  <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-gray-300 rounded-xl hover:border-purple-500 hover:bg-purple-50/50 transition-all cursor-pointer group bg-white/50">
+                    <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                      <Video className="w-8 h-8 text-gray-400 group-hover:text-purple-500 mb-2 transition-colors" />
+                      <p className="text-sm text-gray-500 group-hover:text-purple-600 font-medium">Upload Video</p>
+                    </div>
+                    <input
+                      type="file"
+                      accept="video/*"
+                      onChange={handleVideoChange}
+                      className="hidden"
+                    />
+                  </label>
+                </div>
+
+                {/* Voice Note */}
+                <div className="space-y-3">
+                  <label className="block text-sm font-semibold text-gray-700">
+                    Voice Note
+                  </label>
+                  {!isRecording && !voiceNote ? (
+                    <button
+                      type="button"
+                      onClick={startRecording}
+                      className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-gray-300 rounded-xl hover:border-red-500 hover:bg-red-50/50 transition-all group bg-white/50"
+                    >
+                      <Mic className="w-8 h-8 text-gray-400 group-hover:text-red-500 mb-2 transition-colors" />
+                      <p className="text-sm text-gray-500 group-hover:text-red-600 font-medium">Record Audio</p>
+                    </button>
+                  ) : isRecording ? (
+                    <button
+                      type="button"
+                      onClick={stopRecording}
+                      className="flex flex-col items-center justify-center w-full h-32 border-2 border-red-500 bg-red-50 rounded-xl animate-pulse"
+                    >
+                      <MicOff className="w-8 h-8 text-red-600 mb-2" />
+                      <p className="text-sm text-red-700 font-bold">Stop Recording</p>
+                      <p className="text-xs text-red-600 mt-1">
+                        {Math.floor(recordingDuration / 60)}:{(recordingDuration % 60).toString().padStart(2, '0')}
+                      </p>
+                    </button>
+                  ) : (
+                    <div className="flex flex-col items-center justify-center w-full h-32 border-2 border-green-500 bg-green-50 rounded-xl relative">
+                      <audio src={voiceNote} controls className="w-11/12 h-8 mb-2 opacity-80" />
+                      <button
+                        type="button"
+                        onClick={removeVoiceNote}
+                        className="text-xs text-red-600 hover:underline font-semibold"
+                      >
+                        Remove Recording
+                      </button>
+                    </div>
+                  )}
+                </div>
               </div>
-              
-              {/* Photo Previews */}
-              {photoPreviews.length > 0 && (
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+
+              {/* Previews */}
+              {(photoPreviews.length > 0 || videoPreview) && (
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
                   {photoPreviews.map((preview, index) => (
-                    <div key={index} className="relative">
-                      <img
-                        src={preview}
-                        alt={`Preview ${index + 1}`}
-                        className="w-full h-32 object-cover rounded-lg border-2 border-gray-200"
-                      />
+                    <div key={index} className="relative group rounded-xl overflow-hidden shadow-md h-24">
+                      <img src={preview} alt="Preview" className="w-full h-full object-cover" />
                       <button
                         type="button"
                         onClick={() => removePhoto(index)}
-                        className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-1 hover:bg-red-600"
+                        className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
                       >
-                        <X className="w-4 h-4" />
+                        <X className="w-8 h-8 text-white bg-red-500/80 rounded-full p-1" />
                       </button>
                     </div>
                   ))}
+                  {videoPreview && (
+                    <div className="relative group rounded-xl overflow-hidden shadow-md h-24 bg-black">
+                      <video src={videoPreview} className="w-full h-full object-cover opacity-80" />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <button
+                          type="button"
+                          onClick={removeVideo}
+                          className="bg-red-500/80 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                        >
+                          <X className="w-5 h-5" />
+                        </button>
+                      </div>
+                    </div>
+                  )}
                 </div>
               )}
             </div>
 
-            {/* Video Upload */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Video (Optional - Max 10MB)
-              </label>
-              <div className="flex items-center space-x-4">
-                <label className="flex items-center space-x-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition cursor-pointer">
-                  <Video className="w-5 h-5" />
-                  <span>Upload Video</span>
-                  <input
-                    type="file"
-                    accept="video/*"
-                    onChange={handleVideoChange}
-                    className="hidden"
-                  />
-                </label>
-                {video && (
-                  <div className="flex items-center space-x-2">
-                    <span className="text-sm text-gray-600">{video.name}</span>
-                    <button
-                      type="button"
-                      onClick={removeVideo}
-                      className="text-red-500 hover:text-red-700"
-                    >
-                      <X className="w-4 h-4" />
-                    </button>
-                  </div>
-                )}
+            {/* Location */}
+            <div className="space-y-4 pt-4 border-t border-gray-100">
+              <div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Location</h3>
+                <p className="text-sm text-gray-600 mb-4">Click on the map or use your current location to pinpoint the issue.</p>
               </div>
-              {videoPreview && (
-                <video
-                  src={videoPreview}
-                  controls
-                  className="mt-4 max-w-md rounded-lg border-2 border-gray-200"
-                />
-              )}
-            </div>
 
-            {/* Voice Note */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Voice Note (Optional - For accessibility)
-              </label>
-              <div className="flex items-center space-x-4">
-                {!isRecording && !voiceNote && (
+              <div className="rounded-2xl overflow-hidden border-2 border-gray-200 shadow-inner relative">
+                <IssueMap
+                  issues={locationSet ? [{
+                    id: 'temp',
+                    user_id: user?.email || 'anonymous',
+                    issue_type: issueType as any,
+                    description: 'Selected location',
+                    latitude,
+                    longitude,
+                    status: 'pending',
+                    priority: priority,
+                    created_at: new Date().toISOString(),
+                    updated_at: new Date().toISOString(),
+                  }] : []}
+                  center={{ lat: latitude, lng: longitude }}
+                  onLocationSelect={handleLocationSelect}
+                  height="400px"
+                />
+
+                {/* Map Controls Overlay */}
+                <div className="absolute top-4 right-4 z-[999]">
                   <button
                     type="button"
-                    onClick={startRecording}
-                    className="flex items-center space-x-2 px-4 py-2 bg-green-100 text-green-700 rounded-lg hover:bg-green-200 transition"
+                    onClick={handleUseCurrentLocation}
+                    className="flex items-center space-x-2 px-4 py-2 bg-white text-blue-600 font-semibold rounded-lg shadow-lg hover:bg-gray-50 transition-all border border-gray-100"
                   >
-                    <Mic className="w-5 h-5" />
-                    <span>Start Recording</span>
+                    <MapPin className="w-4 h-4" />
+                    <span>My Location</span>
                   </button>
-                )}
-                
-                {isRecording && (
-                  <div className="flex items-center space-x-4">
-                    <button
-                      type="button"
-                      onClick={stopRecording}
-                      className="flex items-center space-x-2 px-4 py-2 bg-red-100 text-red-700 rounded-lg hover:bg-red-200 transition"
-                    >
-                      <MicOff className="w-5 h-5" />
-                      <span>Stop Recording</span>
-                    </button>
-                    <span className="text-sm text-gray-600">
-                      Recording: {Math.floor(recordingDuration / 60)}:{(recordingDuration % 60).toString().padStart(2, '0')}
-                    </span>
-                  </div>
-                )}
-                
-                {voiceNote && !isRecording && (
-                  <div className="flex items-center space-x-4">
-                    <audio src={voiceNote} controls className="max-w-xs" />
-                    <button
-                      type="button"
-                      onClick={removeVoiceNote}
-                      className="text-red-500 hover:text-red-700"
-                    >
-                      <X className="w-4 h-4" />
-                    </button>
-                  </div>
-                )}
+                </div>
               </div>
-            </div>
 
-            {/* Location */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Location
-              </label>
-              <div className="mb-4">
-                <button
-                  type="button"
-                  onClick={handleUseCurrentLocation}
-                  className="flex items-center space-x-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
-                >
-                  <MapPin className="w-5 h-5" />
-                  <span>Use My Current Location</span>
-                </button>
-                <p className="text-sm text-gray-600 mt-2">
-                  Or click on the map to set the location
-                </p>
-              </div>
-              <IssueMap
-                issues={locationSet ? [{
-                  id: 'temp',
-                  user_id: user?.email || 'anonymous',
-                  issue_type: issueType as any,
-                  description: 'Selected location',
-                  latitude,
-                  longitude,
-                  status: 'pending',
-                  priority: priority,
-                  created_at: new Date().toISOString(),
-                  updated_at: new Date().toISOString(),
-                }] : []}
-                center={{ lat: latitude, lng: longitude }}
-                onLocationSelect={handleLocationSelect}
-                height="400px"
-              />
-              {locationSet && (
-                <p className="text-sm text-green-600 mt-2 flex items-center">
-                  <CheckCircle className="w-4 h-4 mr-1" />
-                  Location set: {latitude.toFixed(6)}, {longitude.toFixed(6)}
-                </p>
+              {locationSet ? (
+                <div className="flex items-center text-green-700 bg-green-50 px-4 py-3 rounded-lg border border-green-200">
+                  <CheckCircle className="w-5 h-5 mr-2" />
+                  <span className="font-medium">Location coordinates set: {latitude.toFixed(6)}, {longitude.toFixed(6)}</span>
+                </div>
+              ) : (
+                <div className="flex items-center text-amber-700 bg-amber-50 px-4 py-3 rounded-lg border border-amber-200">
+                  <MapPin className="w-5 h-5 mr-2" />
+                  <span className="font-medium">Please select a location on the map</span>
+                </div>
               )}
             </div>
 
             {/* Submit Button */}
-            <button
-              type="submit"
-              disabled={loading || success}
-              className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition font-medium disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {loading ? 'Submitting...' : (isAnonymous ? 'Submit Anonymous Report' : 'Submit Complaint')}
-            </button>
+            <div className="pt-6">
+              <button
+                type="submit"
+                disabled={loading || success}
+                className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-4 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-[1.01] hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+              >
+                {loading ? (
+                  <span className="flex items-center justify-center">
+                    <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2"></span>
+                    Submitting Report...
+                  </span>
+                ) : (
+                  isAnonymous ? 'Submit Anonymous Report' : 'Submit Complaint'
+                )}
+              </button>
+              <p className="text-center text-gray-500 text-sm mt-4">
+                By submitting, you agree to our terms of service and privacy policy.
+              </p>
+            </div>
           </form>
         </div>
       </div>

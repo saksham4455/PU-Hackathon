@@ -11,7 +11,7 @@ const { USERS_FILE } = getDataFilePaths();
  */
 export async function getAllUsers(req, res) {
     try {
-        const usersData = readJsonFile(USERS_FILE);
+        const usersData = await readJsonFile(USERS_FILE);
         if (!usersData) {
             return res.status(500).json({ error: 'Failed to read users' });
         }
@@ -28,7 +28,7 @@ export async function getAllUsers(req, res) {
 export async function getUserById(req, res) {
     try {
         const { id } = req.params;
-        const usersData = readJsonFile(USERS_FILE);
+        const usersData = await readJsonFile(USERS_FILE);
 
         if (!usersData) {
             return res.status(500).json({ error: 'Failed to read users' });
@@ -55,7 +55,7 @@ export async function updateUser(req, res) {
         const { id } = req.params;
         const updates = req.body;
 
-        const usersData = readJsonFile(USERS_FILE);
+        const usersData = await readJsonFile(USERS_FILE);
         if (!usersData) {
             return res.status(500).json({ error: 'Failed to read users' });
         }
@@ -72,7 +72,7 @@ export async function updateUser(req, res) {
             updated_at: new Date().toISOString()
         };
 
-        if (writeJsonFile(USERS_FILE, usersData)) {
+        if (await writeJsonFile(USERS_FILE, usersData)) {
             res.json({ user: usersData.users[userIndex], message: 'User updated successfully' });
         } else {
             res.status(500).json({ error: 'Failed to save user data' });
@@ -95,7 +95,7 @@ export async function updateProfile(req, res) {
             return res.status(400).json({ error: 'No fields to update' });
         }
 
-        const usersData = readJsonFile(USERS_FILE);
+        const usersData = await readJsonFile(USERS_FILE);
         if (!usersData) {
             return res.status(500).json({ error: 'Failed to read users' });
         }
@@ -114,7 +114,7 @@ export async function updateProfile(req, res) {
 
         usersData.users[userIndex].updated_at = new Date().toISOString();
 
-        if (writeJsonFile(USERS_FILE, usersData)) {
+        if (await writeJsonFile(USERS_FILE, usersData)) {
             res.json({ user: usersData.users[userIndex], message: 'Profile updated successfully' });
         } else {
             res.status(500).json({ error: 'Failed to save user data' });
@@ -133,7 +133,7 @@ export async function getUserIssues(req, res) {
         const { id } = req.params;
         const { ISSUES_FILE } = getDataFilePaths();
 
-        const issuesData = readJsonFile(ISSUES_FILE);
+        const issuesData = await readJsonFile(ISSUES_FILE);
         if (!issuesData) {
             return res.status(500).json({ error: 'Failed to read issues' });
         }

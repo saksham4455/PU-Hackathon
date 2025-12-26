@@ -98,226 +98,211 @@ export function MyComplaintsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex-grow">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2 flex items-center">
-            <ClipboardList className="w-10 h-10 mr-3" />
-            My Complaints
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 flex-grow py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 right-0 w-full h-96 bg-gradient-to-bl from-purple-600/10 to-blue-600/10 -skew-y-6 transform origin-top-right z-0 pointer-events-none"></div>
+
+      <div className="max-w-5xl mx-auto relative z-10">
+        <div className="mb-10 animate-fade-in text-center md:text-left">
+          <h1 className="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-4 inline-flex items-center gap-4">
+            <div className="p-3 bg-blue-100 rounded-2xl shadow-sm">
+              <ClipboardList className="w-8 h-8 md:w-10 md:h-10 text-blue-600" />
+            </div>
+            My <span className="text-gradient">Complaints</span>
           </h1>
-          <p className="text-gray-600">Track the status of all your reported issues</p>
+          <p className="text-xl text-gray-600 max-w-2xl">
+            Track the status of your reported issues and view the impact you've made in your community.
+          </p>
         </div>
 
         {/* User Stats Widget */}
         {user && allIssues.length > 0 && (
-          <div className="mb-8">
+          <div className="mb-12 animate-slide-up relative">
+            <div className="absolute inset-0 bg-white/40 backdrop-blur-3xl rounded-3xl -z-10 shadow-xl border border-white/20"></div>
             <UserStatsWidget {...calculateUserStats(user.id, allIssues)} />
           </div>
         )}
 
         {issues.length === 0 ? (
-          <div className="bg-white rounded-lg shadow-md p-12 text-center">
-            <ClipboardList className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-            <h2 className="text-2xl font-semibold text-gray-700 mb-2">No complaints yet</h2>
-            <p className="text-gray-500 mb-6">Start by reporting an issue in your city</p>
+          <div className="glass-panel rounded-3xl p-16 text-center animate-fade-in flex flex-col items-center justify-center">
+            <div className="w-24 h-24 bg-gray-50 rounded-full flex items-center justify-center mb-6 shadow-inner">
+              <ClipboardList className="w-12 h-12 text-gray-300" />
+            </div>
+            <h2 className="text-3xl font-heading font-bold text-gray-800 mb-3">No complaints yet</h2>
+            <p className="text-gray-500 mb-8 max-w-md mx-auto text-lg">
+              You haven't reported any issues yet. Be the first to improve your neighborhood!
+            </p>
             <button
               onClick={() => navigate('/report')}
-              className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium"
+              className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl font-bold text-lg flex items-center gap-2 transform hover:-translate-y-1"
             >
-              Report an Issue
+              Start Reporting
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
             </button>
           </div>
         ) : (
-          <div className="space-y-4">
-            {issues.map((issue) => (
+          <div className="space-y-6">
+            {issues.map((issue, index) => (
               <div
                 key={issue.id}
-                className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition"
+                className="glass-panel rounded-2xl p-6 md:p-8 hover:shadow-xl transition-all duration-300 animate-slide-up group border border-white/60"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="flex justify-between items-start mb-3">
+                <div className="flex flex-col md:flex-row justify-between items-start gap-4 mb-6">
                   <div className="flex-1">
-                    <div className="flex items-center space-x-3 mb-2">
-                      <h3 className="text-xl font-semibold text-gray-900 capitalize">
-                        {issue.issue_type}
+                    <div className="flex flex-wrap items-center gap-3 mb-3">
+                      <h3 className="text-2xl font-bold text-gray-900 capitalize font-heading">
+                        {issue.issue_type.replace('_', ' ')}
                       </h3>
-                      <span
-                        className={`px-3 py-1 rounded-full text-xs font-medium ${getPriorityColor(
-                          issue.priority || 'medium'
-                        )}`}
-                      >
-                        {getPriorityLabel(issue.priority || 'medium')}
-                      </span>
-                      <span
-                        className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(
-                          issue.status
-                        )}`}
-                      >
-                        {getStatusLabel(issue.status)}
-                      </span>
+                      <div className="flex items-center gap-2">
+                        <span
+                          className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm ${getPriorityColor(
+                            issue.priority || 'medium'
+                          ).replace('bg-', 'bg-opacity-20 bg-').replace('text-', 'text-opacity-80 border border-opacity-20 border-')}`}
+                        >
+                          {getPriorityLabel(issue.priority || 'medium')}
+                        </span>
+                        <span
+                          className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm ${getStatusColor(
+                            issue.status
+                          ).replace('bg-', 'bg-opacity-20 bg-').replace('text-', 'text-opacity-80 border border-opacity-20 border-')}`}
+                        >
+                          {getStatusLabel(issue.status)}
+                        </span>
+                      </div>
                     </div>
-                    <p className="text-gray-700 mb-3">{issue.description}</p>
+
+                    <p className="text-gray-700 text-lg leading-relaxed mb-4 pl-4 border-l-4 border-blue-100 italic bg-gray-50/50 p-3 rounded-r-lg">
+                      "{issue.description}"
+                    </p>
+
                     {issue.location_address && (
-                      <p className="text-sm text-gray-500 mb-2">{issue.location_address}</p>
-                    )}
-
-                    {/* Multiple Photos */}
-                    {issue.photos && issue.photos.length > 0 && (
-                      <div className="mt-3">
-                        <div className="flex items-center space-x-2 mb-2">
-                          <Camera className="w-4 h-4 text-gray-500" />
-                          <span className="text-sm text-gray-600">Photos ({issue.photos.length})</span>
-                        </div>
-                        <div className="flex space-x-2 overflow-x-auto">
-                          {issue.photos.map((photo, index) => (
-                            <img
-                              key={index}
-                              src={photo}
-                              alt={`Issue Photo ${index + 1}`}
-                              className="w-20 h-20 object-cover rounded-lg border-2 border-gray-200 flex-shrink-0"
-                            />
-                          ))}
-                        </div>
+                      <div className="flex items-center text-gray-500 mb-2 font-medium">
+                        <svg className="w-5 h-5 mr-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        {issue.location_address}
                       </div>
                     )}
 
-                    {/* Single Photo (backward compatibility) */}
-                    {issue.photo_url && (!issue.photos || issue.photos.length === 0) && (
-                      <img
-                        src={issue.photo_url}
-                        alt="Issue"
-                        className="mt-3 max-w-sm rounded-lg border-2 border-gray-200"
-                      />
-                    )}
-
-                    {/* Video */}
-                    {issue.video_url && (
-                      <div className="mt-3">
-                        <div className="flex items-center space-x-2 mb-2">
-                          <Video className="w-4 h-4 text-gray-500" />
-                          <span className="text-sm text-gray-600">Video</span>
+                    {/* Media Gallery Grid */}
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6">
+                      {/* Multiple Photos */}
+                      {issue.photos && issue.photos.map((photo, i) => (
+                        <div key={i} className="relative group/image overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer bg-gray-100 aspect-square">
+                          <img
+                            src={photo}
+                            alt={`Evidence ${i + 1}`}
+                            className="w-full h-full object-cover transform group-hover/image:scale-110 transition-transform duration-500"
+                          />
+                          <div className="absolute inset-0 bg-black/20 opacity-0 group-hover/image:opacity-100 transition-opacity flex items-center justify-center">
+                            <Camera className="w-6 h-6 text-white drop-shadow-lg" />
+                          </div>
                         </div>
-                        <video
-                          src={issue.video_url}
-                          controls
-                          className="max-w-sm rounded-lg border-2 border-gray-200"
-                        >
-                          Your browser does not support the video tag.
-                        </video>
-                      </div>
-                    )}
+                      ))}
 
-                    {/* Voice Note */}
-                    {issue.voice_note_url && (
-                      <div className="mt-3">
-                        <div className="flex items-center space-x-2 mb-2">
-                          <Volume2 className="w-4 h-4 text-gray-500" />
-                          <span className="text-sm text-gray-600">Voice Note</span>
+                      {/* Single Photo legacy fallback */}
+                      {issue.photo_url && (!issue.photos || issue.photos.length === 0) && (
+                        <div className="relative group/image overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer bg-gray-100 aspect-square">
+                          <img
+                            src={issue.photo_url}
+                            alt="Evidence"
+                            className="w-full h-full object-cover transform group-hover/image:scale-110 transition-transform duration-500"
+                          />
                         </div>
-                        <audio
-                          src={issue.voice_note_url}
-                          controls
-                          className="w-full max-w-sm"
-                        >
-                          Your browser does not support the audio element.
-                        </audio>
-                      </div>
-                    )}
+                      )}
+
+                      {/* Video Thumbnail */}
+                      {issue.video_url && (
+                        <div className="relative group/video overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer bg-gray-900 aspect-square flex items-center justify-center">
+                          <video src={issue.video_url} className="absolute inset-0 w-full h-full object-cover opacity-60"></video>
+                          <div className="z-10 bg-white/20 backdrop-blur-sm p-3 rounded-full border border-white/40 group-hover/video:scale-110 transition-transform">
+                            <Video className="w-6 h-6 text-white" />
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Voice Note */}
+                      {issue.voice_note_url && (
+                        <div className="relative overflow-hidden rounded-xl shadow-sm bg-gradient-to-br from-green-50 to-emerald-100 aspect-square flex flex-col items-center justify-center p-4 border border-green-200">
+                          <Volume2 className="w-8 h-8 text-green-600 mb-2" />
+                          <span className="text-xs font-bold text-green-700 uppercase">Voice Note</span>
+                          <audio src={issue.voice_note_url} className="absolute inset-0 opacity-0 cursor-pointer w-full h-full" controls />
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
 
-                {/* Public Comments Section */}
-                {issue.public_comments && issue.public_comments.length > 0 && (
-                  <div className="mt-4">
-                    <h4 className="text-sm font-medium text-gray-900 mb-3">Updates & Comments</h4>
-                    <div className="space-y-3">
-                      {issue.public_comments.map((comment) => (
-                        <div key={comment.id} className="bg-blue-50 border border-blue-200 rounded-lg p-3">
-                          <div className="flex items-center justify-between mb-2">
-                            <div className="flex items-center space-x-2">
-                              <span className="font-medium text-gray-900 text-sm">{comment.author_name}</span>
-                              <span className={`px-2 py-1 rounded-full text-xs font-medium ${comment.author_type === 'admin'
-                                ? 'bg-blue-100 text-blue-700'
-                                : 'bg-green-100 text-green-700'
-                                }`}>
-                                {comment.author_type === 'admin' ? 'Admin' : 'Citizen'}
-                              </span>
-                            </div>
-                            <span className="text-xs text-gray-500">
-                              {new Date(comment.created_at).toLocaleDateString()} at {new Date(comment.created_at).toLocaleTimeString()}
-                            </span>
-                          </div>
-                          <p className="text-gray-700 text-sm">{comment.comment}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* Status History Section */}
-                {issue.status_history && issue.status_history.length > 0 && (
-                  <div className="mt-4">
-                    <h4 className="text-sm font-medium text-gray-900 mb-3">Status History</h4>
-                    <div className="space-y-2">
-                      {issue.status_history
-                        .sort((a, b) => new Date(b.changed_at).getTime() - new Date(a.changed_at).getTime())
-                        .map((historyItem) => (
-                          <div key={historyItem.id} className="bg-gray-50 border border-gray-200 rounded-lg p-3">
-                            <div className="flex items-center justify-between mb-1">
-                              <div className="flex items-center space-x-2">
-                                <span className={`px-2 py-1 rounded-full text-xs font-medium ${historyItem.old_status === 'resolved'
-                                  ? 'bg-green-100 text-green-700'
-                                  : historyItem.old_status === 'in_progress'
-                                    ? 'bg-yellow-100 text-yellow-700'
-                                    : 'bg-red-100 text-red-700'
-                                  }`}>
-                                  {historyItem.old_status.replace('_', ' ')}
-                                </span>
-                                <span className="text-gray-400 text-xs">→</span>
-                                <span className={`px-2 py-1 rounded-full text-xs font-medium ${historyItem.new_status === 'resolved'
-                                  ? 'bg-green-100 text-green-700'
-                                  : historyItem.new_status === 'in_progress'
-                                    ? 'bg-yellow-100 text-yellow-700'
-                                    : 'bg-red-100 text-red-700'
-                                  }`}>
-                                  {historyItem.new_status.replace('_', ' ')}
-                                </span>
+                {/* Interaction & History Section */}
+                <div className="border-t border-gray-100 pt-6 mt-6 grid md:grid-cols-2 gap-8">
+                  {/* Comments Feed */}
+                  {issue.public_comments && issue.public_comments.length > 0 && (
+                    <div>
+                      <h4 className="flex items-center text-sm font-bold text-gray-900 uppercase tracking-wider mb-4">
+                        <svg className="w-4 h-4 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
+                        Comments & Updates
+                      </h4>
+                      <div className="space-y-3 max-h-60 overflow-y-auto pr-2 custom-scrollbar">
+                        {issue.public_comments.map((comment) => (
+                          <div key={comment.id} className="bg-white/80 rounded-xl p-3 shadow-sm border border-gray-100 text-sm">
+                            <div className="flex items-center justify-between mb-2 pb-2 border-b border-gray-100">
+                              <div className="flex items-center gap-2">
+                                <span className="font-bold text-gray-900">{comment.author_name}</span>
+                                {comment.author_type === 'admin' && (
+                                  <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-blue-600 text-white uppercase">Admin</span>
+                                )}
                               </div>
-                              <span className="text-xs text-gray-500">
-                                {new Date(historyItem.changed_at).toLocaleDateString()}
+                              <span className="text-[10px] text-gray-400">
+                                {new Date(comment.created_at).toLocaleDateString()}
                               </span>
                             </div>
-                            <div className="text-xs text-gray-600">
-                              Changed by: {historyItem.changed_by_name}
-                              {historyItem.comment && (
-                                <span className="ml-2 italic">- "{historyItem.comment}"</span>
-                              )}
-                            </div>
+                            <p className="text-gray-700 leading-relaxed">{comment.comment}</p>
                           </div>
                         ))}
+                      </div>
                     </div>
-                  </div>
-                )}
+                  )}
 
-                <div className="flex justify-between items-center text-sm text-gray-500 border-t border-gray-200 pt-3 mt-3">
-                  <div className="flex space-x-4">
-                    <span>
-                      <span className="font-medium">Reported:</span>{' '}
-                      {new Date(issue.created_at).toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'short',
-                        day: 'numeric',
-                      })}
-                    </span>
-                    <span>
-                      <span className="font-medium">Last Updated:</span>{' '}
-                      {new Date(issue.updated_at).toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'short',
-                        day: 'numeric',
-                      })}
-                    </span>
-                  </div>
-                  <span className="text-xs text-gray-400">ID: {issue.id.slice(0, 8)}</span>
+                  {/* Status Timeline */}
+                  {issue.status_history && issue.status_history.length > 0 && (
+                    <div>
+                      <h4 className="flex items-center text-sm font-bold text-gray-900 uppercase tracking-wider mb-4">
+                        <svg className="w-4 h-4 mr-2 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Timeline
+                      </h4>
+                      <div className="space-y-0 relative pl-2">
+                        <div className="absolute top-0 bottom-0 left-[11px] w-0.5 bg-gray-200"></div>
+                        {issue.status_history
+                          .sort((a, b) => new Date(b.changed_at).getTime() - new Date(a.changed_at).getTime())
+                          .map((historyItem) => (
+                            <div key={historyItem.id} className="relative pl-8 pb-6 last:pb-0">
+                              <div className={`absolute left-0 top-1 w-6 h-6 rounded-full border-2 border-white shadow-sm flex items-center justify-center z-10 ${historyItem.new_status === 'resolved' ? 'bg-green-500' :
+                                historyItem.new_status === 'in_progress' ? 'bg-yellow-500' : 'bg-blue-500'
+                                }`}>
+                              </div>
+                              <div className="bg-white/60 rounded-lg p-3 border border-gray-100 shadow-sm text-sm">
+                                <div className="flex justify-between items-center mb-1">
+                                  <span className="font-semibold text-gray-800 capitalize">{historyItem.new_status.replace('_', ' ')}</span>
+                                  <span className="text-[10px] text-gray-500">{new Date(historyItem.changed_at).toLocaleDateString()}</span>
+                                </div>
+                                <div className="text-gray-600 text-xs">
+                                  Updated by <span className="font-medium">{historyItem.changed_by_name}</span>
+                                </div>
+                                {historyItem.comment && (
+                                  <div className="mt-2 text-xs italic text-gray-500 bg-gray-50 p-2 rounded border border-gray-100">
+                                    "{historyItem.comment}"
+                                  </div>
+                                )}
+                              </div>
+                            </div>
+                          ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-mono text-gray-400">
+                  <span>Created: {new Date(issue.created_at).toLocaleDateString()}</span>
+                  <span>ID: #{issue.id.slice(0, 8)}</span>
                 </div>
               </div>
             ))}

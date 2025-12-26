@@ -1,0 +1,170 @@
+{
+    "department_heads": [
+        {
+            "id": "head-001",
+            "email": "road.head@city.gov",
+            "password": "road123",
+            "full_name": "Rajesh Kumar",
+            "role": "department_head",
+            "department_id": "dept-001",
+            "department_name": "Road Maintenance",
+            "phone": "+91-9876543210",
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z",
+            "manages_workers": [
+                "worker-001",
+                "worker-002",
+                "worker-003"
+            ]
+        },
+        {
+            "id": "head-002",
+            "email": "sanitation.head@city.gov",
+            "password": "sanitation123",
+            "full_name": "Priya Sharma",
+            "role": "department_head",
+            "department_id": "dept-002",
+            "department_name": "Sanitation",
+            "phone": "+91-9876543211",
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z",
+            "manages_workers": [
+                "worker-004",
+                "worker-005",
+                "worker-006"
+            ]
+        },
+        {
+            "id": "head-003",
+            "email": "electrical.head@city.gov",
+            "password": "electrical123",
+            "full_name": "Amit Patel",
+            "role": "department_head",
+            "department_id": "dept-003",
+            "department_name": "Electrical Services",
+            "phone": "+91-9876543212",
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z",
+            "manages_workers": [
+                "worker-007",
+                "worker-008",
+                "worker-009"
+            ]
+        },
+        {
+            "id": "head-004",
+            "email": "water.head@city.gov",
+            "password": "water123",
+            "full_name": "Sunita Reddy",
+            "role": "department_head",
+            "department_id": "dept-004",
+            "department_name": "Water & Sewage",
+            "phone": "+91-9876543213",
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z",
+            "manages_workers": [
+                "worker-010",
+                "worker-011",
+                "worker-012"
+            ]
+        },
+        {
+            "id": "head-005",
+            "email": "traffic.head@city.gov",
+            "password": "traffic123",
+            "full_name": "Vikram Singh",
+            "role": "department_head",
+            "department_id": "dept-005",
+            "department_name": "Traffic Management",
+            "phone": "+91-9876543214",
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z",
+            "manages_workers": [
+                "worker-013",
+                "worker-014",
+                "worker-015"
+            ]
+        },
+        {
+            "id": "head-006",
+            "email": "signage.head@city.gov",
+            "password": "signage123",
+            "full_name": "Meera Iyer",
+            "role": "department_head",
+            "department_id": "dept-006",
+            "department_name": "Signage & Markings",
+            "phone": "+91-9876543215",
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z",
+            "manages_workers": [
+                "worker-016",
+                "worker-017"
+            ]
+        },
+        {
+            "id": "head-007",
+            "email": "parks.head@city.gov",
+            "password": "parks123",
+            "full_name": "Arjun Nair",
+            "role": "department_head",
+            "department_id": "dept-007",
+            "department_name": "Parks & Horticulture",
+            "phone": "+91-9876543216",
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z",
+            "manages_workers": [
+                "worker-018",
+                "worker-019",
+                "worker-020"
+            ]
+        },
+        {
+            "id": "head-008",
+            "email": "safety.head@city.gov",
+            "password": "safety123",
+            "full_name": "Kavita Desai",
+            "role": "department_head",
+            "department_id": "dept-008",
+            "department_name": "Public Safety",
+            "phone": "+91-9876543217",
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z",
+            "manages_workers": [
+                "worker-021",
+                "worker-022"
+            ]
+        },
+        {
+            "id": "head-009",
+            "email": "vandalism.head@city.gov",
+            "password": "vandalism123",
+            "full_name": "Rohit Mehta",
+            "role": "department_head",
+            "department_id": "dept-009",
+            "department_name": "Anti-Vandalism",
+            "phone": "+91-9876543218",
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z",
+            "manages_workers": [
+                "worker-023",
+                "worker-024"
+            ]
+        },
+        {
+            "id": "head-010",
+            "email": "general.head@city.gov",
+            "password": "general123",
+            "full_name": "Anjali Gupta",
+            "role": "department_head",
+            "department_id": "dept-010",
+            "department_name": "General Services",
+            "phone": "+91-9876543219",
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z",
+            "manages_workers": [
+                "worker-025",
+                "worker-026"
+            ]
+        }
+    ]
+}
