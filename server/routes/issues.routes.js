@@ -16,6 +16,9 @@ router.post('/', validateIssueData, issuesController.createIssue);
 // Update issue status
 router.put('/:id/status', issuesController.updateStatus);
 
+// Assign issue to worker
+router.put('/:id/assign', issuesController.assignIssue);
+
 // Update admin notes
 router.put('/:id/admin-notes', issuesController.updateAdminNotes);
 

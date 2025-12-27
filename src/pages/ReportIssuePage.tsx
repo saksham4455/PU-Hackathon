@@ -256,7 +256,7 @@ export function ReportIssuePage() {
 
       // Create issue data for backend API
       const issueData: Omit<Issue, 'id' | 'created_at' | 'updated_at'> = {
-        user_id: isAnonymous ? 'anonymous' : (user?.email || ''),
+        user_id: isAnonymous ? 'anonymous' : (user?.id || ''),
         issue_type: issueType as Issue['issue_type'],
         description,
         photo_url: fileUrls?.[0], // Keep first photo for backward compatibility

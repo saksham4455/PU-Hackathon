@@ -53,7 +53,9 @@
           "changed_at": "2025-10-02T21:20:03.433Z",
           "comment": "Pothole repair completed successfully"
         }
-      ]
+      ],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000010bcd890efg",
@@ -89,7 +91,9 @@
           "changed_at": "2025-10-01T11:15:32.513Z",
           "comment": "Linked to existing pothole repair work"
         }
-      ]
+      ],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761396234484vbvmk3i07",
@@ -125,7 +129,9 @@
           "changed_at": "2025-10-02T10:08:30.988Z",
           "comment": "Issue assigned to cleanup team"
         }
-      ]
+      ],
+      "department_id": "dept-002",
+      "department_name": "Sanitation"
     },
     {
       "user_id": "1761400000008vwx234yza",
@@ -161,7 +167,9 @@
           "changed_at": "2025-10-02T08:42:19.177Z",
           "comment": "Linked to existing garbage cleanup work"
         }
-      ]
+      ],
+      "department_id": "dept-002",
+      "department_name": "Sanitation"
     },
     {
       "user_id": "1761396270390yn718qpah",
@@ -176,7 +184,9 @@
       "created_at": "2025-10-02T13:33:54.782Z",
       "updated_at": "2025-10-04T15:51:51.323Z",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761400000009yza567bcd",
@@ -191,7 +201,9 @@
       "created_at": "2025-10-02T22:57:23.478Z",
       "updated_at": "2025-10-04T05:43:40.270Z",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761400000001abc123def",
@@ -227,7 +239,9 @@
           "changed_at": "2025-10-03T17:43:40.097Z",
           "comment": "Emergency repair team dispatched"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000011efg123hij",
@@ -263,7 +277,9 @@
           "changed_at": "2025-10-04T15:02:36.195Z",
           "comment": "Linked to existing water leak repair work"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000002def456ghi",
@@ -309,7 +325,9 @@
           "changed_at": "2025-10-05T02:45:55.818Z",
           "comment": "Signal repair completed"
         }
-      ]
+      ],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000012hij456klm",
@@ -345,7 +363,9 @@
           "changed_at": "2025-10-04T20:52:04.949Z",
           "comment": "Linked to existing traffic signal repair work"
         }
-      ]
+      ],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000003ghi789jkl",
@@ -381,7 +401,9 @@
           "changed_at": "2025-10-05T20:50:54.966Z",
           "comment": "Sewer maintenance team dispatched"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000004jkl012mno",
@@ -417,7 +439,9 @@
           "changed_at": "2025-10-06T00:34:06.581Z",
           "comment": "Linked to existing sewer maintenance work"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000005mno345pqr",
@@ -432,7 +456,9 @@
       "created_at": "2025-10-05T16:41:44.347Z",
       "updated_at": "2025-10-05T18:02:42.207Z",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000006pqr678stu",
@@ -447,7 +473,9 @@
       "created_at": "2025-10-06T02:05:13.043Z",
       "updated_at": "2025-10-07T03:25:23.630Z",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000005mno345pqr",
@@ -493,7 +521,9 @@
           "changed_at": "2025-10-07T17:09:35.736Z",
           "comment": "Construction company compliance verified"
         }
-      ]
+      ],
+      "department_id": "dept-008",
+      "department_name": "Public Safety"
     },
     {
       "user_id": "1761400000006pqr678stu",
@@ -529,7 +559,9 @@
           "changed_at": "2025-10-07T09:59:07.457Z",
           "comment": "Linked to existing noise pollution compliance work"
         }
-      ]
+      ],
+      "department_id": "dept-008",
+      "department_name": "Public Safety"
     },
     {
       "user_id": "1761400000007stu901vwx",
@@ -565,7 +597,9 @@
           "changed_at": "2025-10-07T18:22:27.470Z",
           "comment": "Linked to existing park maintenance work"
         }
-      ]
+      ],
+      "department_id": "dept-007",
+      "department_name": "Parks & Horticulture"
     },
     {
       "user_id": "1761400000007stu901vwx",
@@ -580,7 +614,9 @@
       "created_at": "2025-10-07T15:39:07.825Z",
       "updated_at": "2025-10-09T08:42:31.190Z",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-006",
+      "department_name": "Signage & Markings"
     },
     {
       "user_id": "1761400000008vwx234yza",
@@ -595,7 +631,9 @@
       "created_at": "2025-10-08T01:02:36.521Z",
       "updated_at": "2025-10-08T02:40:02.716Z",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-006",
+      "department_name": "Signage & Markings"
     },
     {
       "user_id": "1761400000008vwx234yza",
@@ -641,7 +679,9 @@
           "changed_at": "2025-10-10T17:20:52.550Z",
           "comment": "Drainage improvement completed"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000013klm789nop",
@@ -677,7 +717,9 @@
           "changed_at": "2025-10-09T01:52:24.040Z",
           "comment": "Linked to existing drainage improvement work"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000009yza567bcd",
@@ -713,7 +755,9 @@
           "changed_at": "2025-10-10T03:32:20.113Z",
           "comment": "Transport department assigned"
         }
-      ]
+      ],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000010bcd890efg",
@@ -749,7 +793,9 @@
           "changed_at": "2025-10-09T18:33:35.900Z",
           "comment": "Linked to existing bus stop repair work"
         }
-      ]
+      ],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000010bcd890efg",
@@ -785,7 +831,9 @@
           "changed_at": "2025-10-10T05:46:56.814Z",
           "comment": "Linked to existing bus stop repair work"
         }
-      ]
+      ],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000011efg123hij",
@@ -800,7 +848,9 @@
       "created_at": "2025-10-10T09:23:28.695Z",
       "updated_at": "2025-10-11T03:45:05.522Z",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-009",
+      "department_name": "Anti-Vandalism"
     },
     {
       "user_id": "1761400000011efg123hij",
@@ -846,7 +896,9 @@
           "changed_at": "2025-10-12T16:55:10.758Z",
           "comment": "Tree maintenance completed"
         }
-      ]
+      ],
+      "department_id": "dept-007",
+      "department_name": "Parks & Horticulture"
     },
     {
       "user_id": "1761400000014nop012qrs",
@@ -882,7 +934,9 @@
           "changed_at": "2025-10-11T10:28:51.899Z",
           "comment": "Linked to existing tree maintenance work"
         }
-      ]
+      ],
+      "department_id": "dept-007",
+      "department_name": "Parks & Horticulture"
     },
     {
       "user_id": "1761400000012hij456klm",
@@ -918,7 +972,9 @@
           "changed_at": "2025-10-12T02:22:24.543Z",
           "comment": "Traffic enforcement dispatched"
         }
-      ]
+      ],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000015qrs345tuv",
@@ -954,7 +1010,9 @@
           "changed_at": "2025-10-12T00:26:02.922Z",
           "comment": "Linked to existing parking violation enforcement"
         }
-      ]
+      ],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000013klm789nop",
@@ -969,7 +1027,9 @@
       "created_at": "2025-10-12T08:20:52.173Z",
       "updated_at": "2025-10-13T03:17:23.426Z",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-002",
+      "department_name": "Sanitation"
     },
     {
       "user_id": "1761400000014nop012qrs",
@@ -984,7 +1044,9 @@
       "created_at": "2025-10-12T17:44:20.869Z",
       "updated_at": "2025-10-14T18:17:11.657Z",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-002",
+      "department_name": "Sanitation"
     },
     {
       "user_id": "1761400000014nop012qrs",
@@ -999,7 +1061,9 @@
       "created_at": "2025-10-13T03:07:49.564Z",
       "updated_at": "2025-10-13T23:08:36.986Z",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-002",
+      "department_name": "Sanitation"
     },
     {
       "user_id": "1761400000014nop012qrs",
@@ -1045,7 +1109,9 @@
           "changed_at": "2025-10-15T13:32:18.001Z",
           "comment": "Cleanup completed"
         }
-      ]
+      ],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000015qrs345tuv",
@@ -1081,7 +1147,9 @@
           "changed_at": "2025-10-14T04:02:26.737Z",
           "comment": "Linked to existing road construction cleanup work"
         }
-      ]
+      ],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000015qrs345tuv",
@@ -1117,7 +1185,9 @@
           "changed_at": "2025-10-14T10:20:16.180Z",
           "comment": "Municipal enforcement dispatched"
         }
-      ]
+      ],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000016tuv678wxy",
@@ -1153,7 +1223,9 @@
           "changed_at": "2025-10-14T19:51:03.526Z",
           "comment": "Linked to existing street vendor enforcement work"
         }
-      ]
+      ],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000016tuv678wxy",
@@ -1168,7 +1240,9 @@
       "created_at": "2025-10-15T02:05:13.042Z",
       "updated_at": "2025-10-16T18:04:11.100Z",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000017wxy901zab",
@@ -1183,7 +1257,9 @@
       "created_at": "2025-10-15T11:28:41.738Z",
       "updated_at": "2025-10-17T00:39:16.272Z",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000017wxy901zab",
@@ -1198,7 +1274,9 @@
       "created_at": "2025-10-15T20:52:10.434Z",
       "updated_at": "2025-10-15T22:09:20.379Z",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000017wxy901zab",
@@ -1244,7 +1322,9 @@
           "changed_at": "2025-10-18T11:58:39.633Z",
           "comment": "Water quality restored"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000018zab234cde",
@@ -1280,7 +1360,9 @@
           "changed_at": "2025-10-17T01:35:20.621Z",
           "comment": "Linked to existing water quality restoration work"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000019cde567fgh",
@@ -1316,7 +1398,9 @@
           "changed_at": "2025-10-17T07:17:51.606Z",
           "comment": "Linked to existing electrical repair work"
         }
-      ]
+      ],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761400000019cde567fgh",
@@ -1331,7 +1415,9 @@
       "created_at": "2025-10-17T10:26:05.216Z",
       "updated_at": "2025-10-19T09:01:29.424Z",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000020fgh890ijk",
@@ -1346,7 +1432,9 @@
       "created_at": "2025-10-17T19:49:33.912Z",
       "updated_at": "2025-10-18T06:32:32.014Z",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000020fgh890ijk",
@@ -1361,7 +1449,9 @@
       "created_at": "2025-10-18T05:13:02.608Z",
       "updated_at": "2025-10-19T23:57:46.172Z",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000020fgh890ijk",
@@ -1407,7 +1497,9 @@
           "changed_at": "2025-10-19T22:12:58.209Z",
           "comment": "Road sign replaced"
         }
-      ]
+      ],
+      "department_id": "dept-006",
+      "department_name": "Signage & Markings"
     },
     {
       "user_id": "1761400000021ijk123lmn",
@@ -1443,7 +1535,9 @@
           "changed_at": "2025-10-19T12:53:24.030Z",
           "comment": "Linked to existing road sign replacement work"
         }
-      ]
+      ],
+      "department_id": "dept-006",
+      "department_name": "Signage & Markings"
     },
     {
       "user_id": "1761400000021ijk123lmn",
@@ -1479,7 +1573,9 @@
           "changed_at": "2025-10-19T11:43:15.629Z",
           "comment": "IT department assigned"
         }
-      ]
+      ],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761400000022lmn456opq",
@@ -1515,7 +1611,9 @@
           "changed_at": "2025-10-20T14:47:01.697Z",
           "comment": "Linked to existing WiFi troubleshooting work"
         }
-      ]
+      ],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761400000022lmn456opq",
@@ -1551,7 +1649,9 @@
           "changed_at": "2025-10-20T07:20:53.891Z",
           "comment": "Linked to existing WiFi troubleshooting work"
         }
-      ]
+      ],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761400000022lmn456opq",
@@ -1566,7 +1666,9 @@
       "created_at": "2025-10-20T13:33:54.781Z",
       "updated_at": "2025-10-22T11:36:29.723Z",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000023opq789rst",
@@ -1581,7 +1683,9 @@
       "created_at": "2025-10-20T22:57:23.477Z",
       "updated_at": "2025-10-21T05:51:35.969Z",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000023opq789rst",
@@ -1596,7 +1700,9 @@
       "created_at": "2025-10-21T08:20:52.173Z",
       "updated_at": "2025-10-22T19:21:31.242Z",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000023opq789rst",
@@ -1642,7 +1748,9 @@
           "changed_at": "2025-10-22T23:53:58.094Z",
           "comment": "AC repair completed"
         }
-      ]
+      ],
+      "department_id": "dept-002",
+      "department_name": "Sanitation"
     },
     {
       "user_id": "1761400000024rst012uvw",
@@ -1678,7 +1786,9 @@
           "changed_at": "2025-10-22T22:56:03.514Z",
           "comment": "Linked to existing library AC repair work"
         }
-      ]
+      ],
+      "department_id": "dept-002",
+      "department_name": "Sanitation"
     },
     {
       "user_id": "1761400000025uvw345xyz",
@@ -1714,7 +1824,9 @@
           "changed_at": "2025-10-23T05:11:39.518Z",
           "comment": "Linked to existing public art restoration work"
         }
-      ]
+      ],
+      "department_id": "dept-009",
+      "department_name": "Anti-Vandalism"
     },
     {
       "user_id": "1761400000025uvw345xyz",
@@ -1729,7 +1841,9 @@
       "created_at": "2025-10-22T21:54:46.955Z",
       "updated_at": "2025-10-24T01:32:13.190Z",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000026xyz678abc",
@@ -1744,7 +1858,9 @@
       "created_at": "2025-10-23T07:18:15.651Z",
       "updated_at": "2025-10-24T20:04:30.395Z",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000029ghi567jkl",
@@ -1790,7 +1906,9 @@
           "changed_at": "2025-10-24T23:28:47.659Z",
           "comment": "Cleanup completed, investigation ongoing"
         }
-      ]
+      ],
+      "department_id": "dept-002",
+      "department_name": "Sanitation"
     },
     {
       "user_id": "1761400000026xyz678abc",
@@ -1826,7 +1944,9 @@
           "changed_at": "2025-10-24T08:08:29.147Z",
           "comment": "Linked to existing environmental cleanup work"
         }
-      ]
+      ],
+      "department_id": "dept-002",
+      "department_name": "Sanitation"
     },
     {
       "user_id": "1761400000027abc901def",
@@ -1872,7 +1992,9 @@
           "changed_at": "2025-10-25T12:35:49.705Z",
           "comment": "Parking lot resurfacing completed"
         }
-      ]
+      ],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000028def234ghi",
@@ -1908,7 +2030,9 @@
           "changed_at": "2025-10-25T11:16:03.919Z",
           "comment": "Linked to existing safety repair work"
         }
-      ]
+      ],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000028def234ghi",
@@ -1923,7 +2047,9 @@
       "created_at": "2025-10-25T06:15:39.129Z",
       "updated_at": "2025-10-26T22:20:37.911Z",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000029ghi567jkl",
@@ -1938,7 +2064,9 @@
       "created_at": "2025-10-25T15:39:07.825Z",
       "updated_at": "2025-10-26T18:05:02.626Z",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000029ghi567jkl",
@@ -1984,7 +2112,9 @@
           "changed_at": "2025-10-27T18:41:25.763Z",
           "comment": "Cleanup completed, investigation ongoing"
         }
-      ]
+      ],
+      "department_id": "dept-002",
+      "department_name": "Sanitation"
     },
     {
       "status": "pending",
@@ -1996,7 +2126,9 @@
       "user_id": "test-user-123",
       "id": "17614149783065isosp5s5",
       "created_at": "2025-10-26T10:26:05.216Z",
-      "updated_at": "2025-10-28T12:13:20.494Z"
+      "updated_at": "2025-10-28T12:13:20.494Z",
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "test-user-123",
@@ -2008,7 +2140,9 @@
       "status": "pending",
       "id": "1761414991441d596840mj",
       "created_at": "2025-10-26T19:49:33.912Z",
-      "updated_at": "2025-10-29T06:11:23.845Z"
+      "updated_at": "2025-10-29T06:11:23.845Z",
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761335666815k8sd30ib0",
@@ -2022,7 +2156,9 @@
       "is_anonymous": false,
       "id": "1761415327545e7faen8v1",
       "created_at": "2025-10-27T05:13:02.607Z",
-      "updated_at": "2025-10-28T03:05:09.308Z"
+      "updated_at": "2025-10-28T03:05:09.308Z",
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761396234484vbvmk3i07",
@@ -2039,7 +2175,9 @@
       "is_anonymous": false,
       "id": "1761420976351f57rh0m15",
       "created_at": "2025-10-27T14:36:31.303Z",
-      "updated_at": "2025-10-27T21:38:48.139Z"
+      "updated_at": "2025-10-27T21:38:48.139Z",
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000017wxy901zab",
@@ -2077,7 +2215,9 @@
           "changed_at": "2025-11-02T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761400000007stu901vwx",
@@ -2115,7 +2255,9 @@
           "changed_at": "2025-11-09T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000018zab234cde",
@@ -2152,7 +2294,9 @@
           "changed_at": "2025-11-18T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000002def456ghi",
@@ -2168,7 +2312,9 @@
       "updated_at": "2025-12-11T13:17:57.134921Z",
       "location_address": "Maple Avenue",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000006pqr678stu",
@@ -2185,7 +2331,9 @@
       "location_address": "Sycamore Street",
       "image_path": "/uploads/issue_6962.jpg",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-007",
+      "department_name": "Parks & Horticulture"
     },
     {
       "user_id": "1761400000008vwx234yza",
@@ -2201,7 +2349,9 @@
       "updated_at": "2025-11-23T13:17:57.134921Z",
       "location_address": "Main Street",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761396234484vbvmk3i07",
@@ -2238,7 +2388,9 @@
           "changed_at": "2025-12-15T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000023opq789rst",
@@ -2276,7 +2428,9 @@
           "changed_at": "2025-12-15T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761401960787mvtlnkn0a",
@@ -2292,7 +2446,9 @@
       "updated_at": "2025-12-14T13:17:57.134921Z",
       "location_address": "Chestnut Avenue",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761400000009yza567bcd",
@@ -2329,7 +2485,9 @@
           "changed_at": "2025-11-28T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761396270390yn718qpah",
@@ -2346,7 +2504,9 @@
       "location_address": "Beech Boulevard",
       "image_path": "/uploads/issue_9029.jpg",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761400000024rst012uvw",
@@ -2400,7 +2560,9 @@
           "changed_at": "2025-12-18T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000004jkl012mno",
@@ -2416,7 +2578,9 @@
       "updated_at": "2025-11-11T13:17:57.134921Z",
       "location_address": "Beech Boulevard",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-007",
+      "department_name": "Parks & Horticulture"
     },
     {
       "user_id": "1761335666815k8sd30ib0",
@@ -2432,7 +2596,9 @@
       "updated_at": "2025-12-22T13:17:57.134921Z",
       "location_address": "Beech Boulevard",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761396234484vbvmk3i07",
@@ -2470,7 +2636,9 @@
           "changed_at": "2025-12-08T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000006pqr678stu",
@@ -2507,7 +2675,9 @@
           "changed_at": "2025-10-28T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000006pqr678stu",
@@ -2545,7 +2715,9 @@
           "changed_at": "2025-12-21T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-007",
+      "department_name": "Parks & Horticulture"
     },
     {
       "user_id": "1761400000013klm789nop",
@@ -2562,7 +2734,9 @@
       "location_address": "Main Street",
       "image_path": "/uploads/issue_2141.jpg",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000013klm789nop",
@@ -2599,7 +2773,9 @@
           "changed_at": "2025-12-01T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000023opq789rst",
@@ -2636,7 +2812,9 @@
           "changed_at": "2025-11-29T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-007",
+      "department_name": "Parks & Horticulture"
     },
     {
       "user_id": "1761400000012hij456klm",
@@ -2674,7 +2852,9 @@
           "changed_at": "2025-10-27T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761396270390yn718qpah",
@@ -2728,7 +2908,9 @@
           "changed_at": "2025-12-10T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000025uvw345xyz",
@@ -2760,7 +2942,9 @@
       "updated_at": "2025-12-14T13:17:57.134921Z",
       "location_address": "Magnolia Drive",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000022lmn456opq",
@@ -2797,7 +2981,9 @@
           "changed_at": "2025-12-29T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-007",
+      "department_name": "Parks & Horticulture"
     },
     {
       "user_id": "1761400000019cde567fgh",
@@ -2834,7 +3020,9 @@
           "changed_at": "2025-11-14T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000028def234ghi",
@@ -2871,7 +3059,9 @@
           "changed_at": "2025-11-22T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761400000019cde567fgh",
@@ -2908,7 +3098,9 @@
           "changed_at": "2025-11-09T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-008",
+      "department_name": "Public Safety"
     },
     {
       "user_id": "1761401960787mvtlnkn0a",
@@ -2946,7 +3138,9 @@
           "changed_at": "2025-12-11T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761401960787mvtlnkn0a",
@@ -2963,7 +3157,9 @@
       "location_address": "Beech Boulevard",
       "image_path": "/uploads/issue_8073.jpg",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-007",
+      "department_name": "Parks & Horticulture"
     },
     {
       "user_id": "1761400000009yza567bcd",
@@ -2980,7 +3176,9 @@
       "location_address": "Sequoia Avenue",
       "image_path": "/uploads/issue_1893.jpg",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000025uvw345xyz",
@@ -2996,7 +3194,9 @@
       "updated_at": "2025-12-19T13:17:57.134921Z",
       "location_address": "Beech Boulevard",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-007",
+      "department_name": "Parks & Horticulture"
     },
     {
       "user_id": "1761400000027abc901def",
@@ -3034,7 +3234,9 @@
           "changed_at": "2025-11-26T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-008",
+      "department_name": "Public Safety"
     },
     {
       "user_id": "1761335666815k8sd30ib0",
@@ -3146,7 +3348,9 @@
           "changed_at": "2025-11-16T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000024rst012uvw",
@@ -3183,7 +3387,9 @@
           "changed_at": "2025-11-11T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000019cde567fgh",
@@ -3199,7 +3405,9 @@
       "updated_at": "2025-12-11T13:17:57.134921Z",
       "location_address": "Sequoia Avenue",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000011efg123hij",
@@ -3215,7 +3423,9 @@
       "updated_at": "2025-12-20T13:17:57.134921Z",
       "location_address": "Dogwood Way",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000021ijk123lmn",
@@ -3231,7 +3441,9 @@
       "updated_at": "2025-11-16T13:17:57.134921Z",
       "location_address": "Cottonwood Road",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-002",
+      "department_name": "Sanitation"
     },
     {
       "user_id": "1761400000022lmn456opq",
@@ -3269,7 +3481,9 @@
           "changed_at": "2025-11-03T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000016tuv678wxy",
@@ -3285,7 +3499,9 @@
       "updated_at": "2025-12-21T13:17:57.134921Z",
       "location_address": "Ash Court",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000020fgh890ijk",
@@ -3323,7 +3539,9 @@
           "changed_at": "2025-12-12T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-002",
+      "department_name": "Sanitation"
     },
     {
       "user_id": "1761400000023opq789rst",
@@ -3360,7 +3578,9 @@
           "changed_at": "2025-11-25T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-008",
+      "department_name": "Public Safety"
     },
     {
       "user_id": "1761400000029ghi567jkl",
@@ -3397,7 +3617,9 @@
           "changed_at": "2025-12-22T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000008vwx234yza",
@@ -3413,7 +3635,9 @@
       "updated_at": "2025-12-11T13:17:57.134921Z",
       "location_address": "Ash Court",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000019cde567fgh",
@@ -3451,7 +3675,9 @@
           "changed_at": "2025-12-24T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000013klm789nop",
@@ -3488,7 +3714,9 @@
           "changed_at": "2025-11-21T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000015qrs345tuv",
@@ -3526,7 +3754,9 @@
           "changed_at": "2025-11-16T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000011efg123hij",
@@ -3563,7 +3793,9 @@
           "changed_at": "2025-11-21T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-002",
+      "department_name": "Sanitation"
     },
     {
       "user_id": "1761400000012hij456klm",
@@ -3601,7 +3833,9 @@
           "changed_at": "2025-12-19T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000021ijk123lmn",
@@ -3639,7 +3873,9 @@
           "changed_at": "2025-12-24T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-007",
+      "department_name": "Parks & Horticulture"
     },
     {
       "user_id": "1761400000013klm789nop",
@@ -3676,7 +3912,9 @@
           "changed_at": "2025-12-11T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000022lmn456opq",
@@ -3730,7 +3968,9 @@
           "changed_at": "2025-12-09T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761396270390yn718qpah",
@@ -3768,7 +4008,9 @@
           "changed_at": "2025-12-28T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-007",
+      "department_name": "Parks & Horticulture"
     },
     {
       "user_id": "1761400000021ijk123lmn",
@@ -3784,7 +4026,9 @@
       "updated_at": "2025-12-21T13:17:57.134921Z",
       "location_address": "Palm Street",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000019cde567fgh",
@@ -3800,7 +4044,9 @@
       "updated_at": "2025-11-21T13:17:57.134921Z",
       "location_address": "Juniper Lane",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761400000025uvw345xyz",
@@ -3837,7 +4083,9 @@
           "changed_at": "2025-12-13T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761400000009yza567bcd",
@@ -3853,7 +4101,9 @@
       "updated_at": "2025-10-31T13:17:57.134921Z",
       "location_address": "Elm Boulevard",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000027abc901def",
@@ -3870,7 +4120,9 @@
       "location_address": "Cottonwood Road",
       "image_path": "/uploads/issue_2750.jpg",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000013klm789nop",
@@ -3925,7 +4177,9 @@
           "changed_at": "2025-11-22T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000021ijk123lmn",
@@ -3963,7 +4217,9 @@
           "changed_at": "2025-11-01T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-002",
+      "department_name": "Sanitation"
     },
     {
       "user_id": "1761400000029ghi567jkl",
@@ -4001,7 +4257,9 @@
           "changed_at": "2025-11-22T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-008",
+      "department_name": "Public Safety"
     },
     {
       "user_id": "1761335666815k8sd30ib0",
@@ -4055,7 +4313,9 @@
           "changed_at": "2025-12-17T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000014nop012qrs",
@@ -4093,7 +4353,9 @@
           "changed_at": "2025-11-27T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-007",
+      "department_name": "Parks & Horticulture"
     },
     {
       "user_id": "1761400000015qrs345tuv",
@@ -4110,7 +4372,9 @@
       "location_address": "Palm Street",
       "image_path": "/uploads/issue_6582.jpg",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-007",
+      "department_name": "Parks & Horticulture"
     },
     {
       "user_id": "1761400000026xyz678abc",
@@ -4148,7 +4412,9 @@
           "changed_at": "2025-10-30T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000017wxy901zab",
@@ -4165,7 +4431,9 @@
       "location_address": "Juniper Lane",
       "image_path": "/uploads/issue_1642.jpg",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761396234484vbvmk3i07",
@@ -4202,7 +4470,9 @@
           "changed_at": "2025-11-23T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000010bcd890efg",
@@ -4277,7 +4547,9 @@
           "changed_at": "2025-11-14T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-002",
+      "department_name": "Sanitation"
     },
     {
       "user_id": "1761400000002def456ghi",
@@ -4331,7 +4603,9 @@
       "updated_at": "2025-11-02T13:17:57.134921Z",
       "location_address": "Redwood Circle",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-007",
+      "department_name": "Parks & Horticulture"
     },
     {
       "user_id": "1761400000004jkl012mno",
@@ -4368,7 +4642,9 @@
           "changed_at": "2025-12-04T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000012hij456klm",
@@ -4406,7 +4682,9 @@
           "changed_at": "2025-11-27T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-007",
+      "department_name": "Parks & Horticulture"
     },
     {
       "user_id": "1761396234484vbvmk3i07",
@@ -4423,7 +4701,9 @@
       "location_address": "Chestnut Avenue",
       "image_path": "/uploads/issue_5421.jpg",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761400000019cde567fgh",
@@ -4439,7 +4719,9 @@
       "updated_at": "2025-11-24T13:17:57.134921Z",
       "location_address": "Birch Drive",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761400000013klm789nop",
@@ -4476,7 +4758,9 @@
           "changed_at": "2025-11-30T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-007",
+      "department_name": "Parks & Horticulture"
     },
     {
       "user_id": "1761396270390yn718qpah",
@@ -4530,7 +4814,9 @@
       "updated_at": "2025-12-22T13:17:57.134921Z",
       "location_address": "Sequoia Avenue",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000012hij456klm",
@@ -4567,7 +4853,9 @@
           "changed_at": "2025-11-23T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-007",
+      "department_name": "Parks & Horticulture"
     },
     {
       "user_id": "1761400000002def456ghi",
@@ -4583,7 +4871,9 @@
       "updated_at": "2025-11-26T13:17:57.134921Z",
       "location_address": "Walnut Avenue",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-008",
+      "department_name": "Public Safety"
     },
     {
       "user_id": "1761396270390yn718qpah",
@@ -4615,7 +4905,9 @@
       "updated_at": "2025-11-19T13:17:57.134921Z",
       "location_address": "Spruce Street",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000019cde567fgh",
@@ -4670,7 +4962,9 @@
           "changed_at": "2025-11-15T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000015qrs345tuv",
@@ -4707,7 +5001,9 @@
           "changed_at": "2025-11-11T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000011efg123hij",
@@ -4745,7 +5041,9 @@
           "changed_at": "2025-11-23T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761400000012hij456klm",
@@ -4782,7 +5080,9 @@
           "changed_at": "2025-12-31T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761396234484vbvmk3i07",
@@ -4819,7 +5119,9 @@
           "changed_at": "2025-12-13T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000021ijk123lmn",
@@ -4836,7 +5138,9 @@
       "location_address": "Elm Boulevard",
       "image_path": "/uploads/issue_5544.jpg",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000023opq789rst",
@@ -4853,7 +5157,9 @@
       "location_address": "Beech Boulevard",
       "image_path": "/uploads/issue_3979.jpg",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761396270390yn718qpah",
@@ -4890,7 +5196,9 @@
           "changed_at": "2025-11-28T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000009yza567bcd",
@@ -4965,7 +5273,9 @@
           "changed_at": "2025-12-31T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000006pqr678stu",
@@ -4981,7 +5291,9 @@
       "updated_at": "2025-12-22T13:17:57.134921Z",
       "location_address": "Walnut Avenue",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-002",
+      "department_name": "Sanitation"
     },
     {
       "user_id": "1761335666815k8sd30ib0",
@@ -4997,7 +5309,9 @@
       "updated_at": "2025-11-17T13:17:57.134921Z",
       "location_address": "Main Street",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000024rst012uvw",
@@ -5035,7 +5349,9 @@
           "changed_at": "2025-12-07T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-008",
+      "department_name": "Public Safety"
     },
     {
       "user_id": "1761400000006pqr678stu",
@@ -5072,7 +5388,9 @@
           "changed_at": "2025-11-09T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-007",
+      "department_name": "Parks & Horticulture"
     },
     {
       "user_id": "1761400000011efg123hij",
@@ -5110,7 +5428,9 @@
           "changed_at": "2025-11-14T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000025uvw345xyz",
@@ -5147,7 +5467,9 @@
           "changed_at": "2025-12-29T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-002",
+      "department_name": "Sanitation"
     },
     {
       "user_id": "1761400000011efg123hij",
@@ -5184,7 +5506,9 @@
           "changed_at": "2025-12-24T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-002",
+      "department_name": "Sanitation"
     },
     {
       "user_id": "1761400000005mno345pqr",
@@ -5201,7 +5525,9 @@
       "location_address": "Cedar Lane",
       "image_path": "/uploads/issue_9722.jpg",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-008",
+      "department_name": "Public Safety"
     },
     {
       "user_id": "1761400000015qrs345tuv",
@@ -5238,7 +5564,9 @@
           "changed_at": "2025-12-23T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-007",
+      "department_name": "Parks & Horticulture"
     },
     {
       "user_id": "1761400000002def456ghi",
@@ -5276,7 +5604,9 @@
           "changed_at": "2025-12-12T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761401960787mvtlnkn0a",
@@ -5293,7 +5623,9 @@
       "location_address": "Ash Court",
       "image_path": "/uploads/issue_7285.jpg",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000011efg123hij",
@@ -5330,7 +5662,9 @@
           "changed_at": "2025-11-22T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-008",
+      "department_name": "Public Safety"
     },
     {
       "user_id": "1761400000028def234ghi",
@@ -5367,7 +5701,9 @@
           "changed_at": "2025-11-29T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000029ghi567jkl",
@@ -5405,7 +5741,9 @@
           "changed_at": "2025-11-25T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000007stu901vwx",
@@ -5442,7 +5780,9 @@
           "changed_at": "2025-12-03T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000016tuv678wxy",
@@ -5479,7 +5819,9 @@
           "changed_at": "2025-11-29T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761335666815k8sd30ib0",
@@ -5517,7 +5859,9 @@
           "changed_at": "2025-12-01T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000022lmn456opq",
@@ -5554,7 +5898,9 @@
           "changed_at": "2025-11-16T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-008",
+      "department_name": "Public Safety"
     },
     {
       "user_id": "1761400000007stu901vwx",
@@ -5591,7 +5937,9 @@
           "changed_at": "2025-11-18T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000027abc901def",
@@ -5628,7 +5976,9 @@
           "changed_at": "2025-12-24T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000009yza567bcd",
@@ -5665,7 +6015,9 @@
           "changed_at": "2025-11-20T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761396234484vbvmk3i07",
@@ -5702,7 +6054,9 @@
           "changed_at": "2025-11-10T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000029ghi567jkl",
@@ -5718,7 +6072,9 @@
       "updated_at": "2025-11-01T13:17:57.134921Z",
       "location_address": "Maple Avenue",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000021ijk123lmn",
@@ -5755,7 +6111,9 @@
           "changed_at": "2025-11-16T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000021ijk123lmn",
@@ -5793,7 +6151,9 @@
           "changed_at": "2025-11-15T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000006pqr678stu",
@@ -5831,7 +6191,9 @@
           "changed_at": "2025-11-19T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000018zab234cde",
@@ -5868,7 +6230,9 @@
           "changed_at": "2025-10-31T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-008",
+      "department_name": "Public Safety"
     },
     {
       "user_id": "1761400000011efg123hij",
@@ -5906,7 +6270,9 @@
           "changed_at": "2025-11-24T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761400000020fgh890ijk",
@@ -5943,7 +6309,9 @@
           "changed_at": "2025-12-16T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000022lmn456opq",
@@ -5960,7 +6328,9 @@
       "location_address": "Sycamore Street",
       "image_path": "/uploads/issue_2034.jpg",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-008",
+      "department_name": "Public Safety"
     },
     {
       "user_id": "1761400000020fgh890ijk",
@@ -5998,7 +6368,9 @@
           "changed_at": "2025-11-14T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-002",
+      "department_name": "Sanitation"
     },
     {
       "user_id": "1761396234484vbvmk3i07",
@@ -6015,7 +6387,9 @@
       "location_address": "Maple Avenue",
       "image_path": "/uploads/issue_3602.jpg",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-008",
+      "department_name": "Public Safety"
     },
     {
       "user_id": "1761400000023opq789rst",
@@ -6032,7 +6406,9 @@
       "location_address": "Magnolia Drive",
       "image_path": "/uploads/issue_9541.jpg",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761396234484vbvmk3i07",
@@ -6070,7 +6446,9 @@
           "changed_at": "2025-11-22T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-008",
+      "department_name": "Public Safety"
     },
     {
       "user_id": "1761400000025uvw345xyz",
@@ -6107,7 +6485,9 @@
           "changed_at": "2025-11-08T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-002",
+      "department_name": "Sanitation"
     },
     {
       "user_id": "1761400000007stu901vwx",
@@ -6123,7 +6503,9 @@
       "updated_at": "2025-11-21T13:17:57.134921Z",
       "location_address": "Birch Drive",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761400000003ghi789jkl",
@@ -6139,7 +6521,9 @@
       "updated_at": "2025-11-21T13:17:57.134921Z",
       "location_address": "Dogwood Way",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761400000015qrs345tuv",
@@ -6172,7 +6556,9 @@
       "updated_at": "2025-12-10T13:17:57.134921Z",
       "location_address": "Oak Avenue",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000025uvw345xyz",
@@ -6188,7 +6574,9 @@
       "updated_at": "2025-12-01T13:17:57.134921Z",
       "location_address": "Magnolia Drive",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000002def456ghi",
@@ -6204,7 +6592,9 @@
       "updated_at": "2025-11-21T13:17:57.134921Z",
       "location_address": "Willow Way",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000026xyz678abc",
@@ -6242,7 +6632,9 @@
           "changed_at": "2025-11-15T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000009yza567bcd",
@@ -6258,7 +6650,9 @@
       "updated_at": "2025-11-03T13:17:57.134921Z",
       "location_address": "Sycamore Street",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000027abc901def",
@@ -6295,7 +6689,9 @@
           "changed_at": "2025-11-07T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-008",
+      "department_name": "Public Safety"
     },
     {
       "user_id": "1761400000009yza567bcd",
@@ -6311,7 +6707,9 @@
       "updated_at": "2025-12-23T13:17:57.134921Z",
       "location_address": "Oak Avenue",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000015qrs345tuv",
@@ -6349,7 +6747,9 @@
           "changed_at": "2025-12-03T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-007",
+      "department_name": "Parks & Horticulture"
     },
     {
       "user_id": "1761400000022lmn456opq",
@@ -6365,7 +6765,9 @@
       "updated_at": "2025-11-02T13:17:57.134921Z",
       "location_address": "Spruce Street",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000001abc123def",
@@ -6402,7 +6804,9 @@
           "changed_at": "2026-01-03T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-007",
+      "department_name": "Parks & Horticulture"
     },
     {
       "user_id": "1761396270390yn718qpah",
@@ -6418,7 +6822,9 @@
       "updated_at": "2025-10-25T13:17:57.134921Z",
       "location_address": "Walnut Avenue",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000010bcd890efg",
@@ -6455,7 +6861,9 @@
           "changed_at": "2025-12-06T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000029ghi567jkl",
@@ -6492,7 +6900,9 @@
           "changed_at": "2025-11-18T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000005mno345pqr",
@@ -6530,7 +6940,9 @@
           "changed_at": "2025-11-11T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000020fgh890ijk",
@@ -6567,7 +6979,9 @@
           "changed_at": "2025-12-04T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761400000011efg123hij",
@@ -6604,7 +7018,9 @@
           "changed_at": "2025-10-28T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000025uvw345xyz",
@@ -6642,7 +7058,9 @@
           "changed_at": "2025-11-11T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-008",
+      "department_name": "Public Safety"
     },
     {
       "user_id": "1761400000003ghi789jkl",
@@ -6658,7 +7076,9 @@
       "updated_at": "2025-11-13T13:17:57.134921Z",
       "location_address": "Ash Court",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-008",
+      "department_name": "Public Safety"
     },
     {
       "user_id": "1761400000023opq789rst",
@@ -6695,7 +7115,9 @@
           "changed_at": "2025-11-06T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000028def234ghi",
@@ -6732,7 +7154,9 @@
           "changed_at": "2025-11-10T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000017wxy901zab",
@@ -6749,7 +7173,9 @@
       "location_address": "Dogwood Way",
       "image_path": "/uploads/issue_7186.jpg",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-008",
+      "department_name": "Public Safety"
     },
     {
       "user_id": "1761396234484vbvmk3i07",
@@ -6824,7 +7250,9 @@
           "changed_at": "2025-12-28T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-007",
+      "department_name": "Parks & Horticulture"
     },
     {
       "user_id": "1761400000021ijk123lmn",
@@ -6862,7 +7290,9 @@
           "changed_at": "2025-12-09T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000018zab234cde",
@@ -6900,7 +7330,9 @@
           "changed_at": "2025-12-17T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000014nop012qrs",
@@ -6916,7 +7348,9 @@
       "updated_at": "2025-11-24T13:17:57.134921Z",
       "location_address": "Palm Street",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761400000007stu901vwx",
@@ -6932,7 +7366,9 @@
       "updated_at": "2025-12-13T13:17:57.134921Z",
       "location_address": "Elm Boulevard",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-002",
+      "department_name": "Sanitation"
     },
     {
       "user_id": "1761400000027abc901def",
@@ -6970,7 +7406,9 @@
           "changed_at": "2025-12-13T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000014nop012qrs",
@@ -7008,7 +7446,9 @@
           "changed_at": "2025-11-05T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-002",
+      "department_name": "Sanitation"
     },
     {
       "user_id": "1761400000025uvw345xyz",
@@ -7024,7 +7464,9 @@
       "updated_at": "2025-12-09T13:17:57.134921Z",
       "location_address": "Willow Way",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000025uvw345xyz",
@@ -7061,7 +7503,9 @@
           "changed_at": "2025-12-21T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761400000011efg123hij",
@@ -7098,7 +7542,9 @@
           "changed_at": "2025-11-05T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-002",
+      "department_name": "Sanitation"
     },
     {
       "user_id": "1761400000024rst012uvw",
@@ -7173,7 +7619,9 @@
           "changed_at": "2025-12-29T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000016tuv678wxy",
@@ -7189,7 +7637,9 @@
       "updated_at": "2025-11-01T13:17:57.134921Z",
       "location_address": "Beech Boulevard",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761401960787mvtlnkn0a",
@@ -7226,7 +7676,9 @@
           "changed_at": "2025-12-09T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000010bcd890efg",
@@ -7243,7 +7695,9 @@
       "location_address": "Dogwood Way",
       "image_path": "/uploads/issue_9467.jpg",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000006pqr678stu",
@@ -7280,7 +7734,9 @@
           "changed_at": "2025-11-06T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-008",
+      "department_name": "Public Safety"
     },
     {
       "user_id": "1761400000026xyz678abc",
@@ -7296,7 +7752,9 @@
       "updated_at": "2025-12-06T13:17:57.134921Z",
       "location_address": "Cedar Lane",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000012hij456klm",
@@ -7334,7 +7792,9 @@
           "changed_at": "2025-11-21T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761401960787mvtlnkn0a",
@@ -7350,7 +7810,9 @@
       "updated_at": "2025-10-26T13:17:57.134921Z",
       "location_address": "Birch Drive",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-007",
+      "department_name": "Parks & Horticulture"
     },
     {
       "user_id": "1761396270390yn718qpah",
@@ -7388,7 +7850,9 @@
           "changed_at": "2025-12-05T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761400000005mno345pqr",
@@ -7425,7 +7889,9 @@
           "changed_at": "2025-11-20T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-008",
+      "department_name": "Public Safety"
     },
     {
       "user_id": "1761400000008vwx234yza",
@@ -7442,7 +7908,9 @@
       "location_address": "Cottonwood Road",
       "image_path": "/uploads/issue_9044.jpg",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000009yza567bcd",
@@ -7458,7 +7926,9 @@
       "updated_at": "2025-11-20T13:17:57.134921Z",
       "location_address": "Elm Boulevard",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000011efg123hij",
@@ -7496,7 +7966,9 @@
           "changed_at": "2025-12-19T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-005",
+      "department_name": "Traffic Management"
     },
     {
       "user_id": "1761400000021ijk123lmn",
@@ -7512,7 +7984,9 @@
       "updated_at": "2025-12-17T13:17:57.134921Z",
       "location_address": "Birch Drive",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000006pqr678stu",
@@ -7550,7 +8024,9 @@
           "changed_at": "2025-11-17T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761400000018zab234cde",
@@ -7588,7 +8064,9 @@
           "changed_at": "2025-12-25T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761401960787mvtlnkn0a",
@@ -7625,7 +8103,9 @@
           "changed_at": "2025-11-21T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000021ijk123lmn",
@@ -7662,7 +8142,9 @@
           "changed_at": "2025-12-09T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-001",
+      "department_name": "Road Maintenance"
     },
     {
       "user_id": "1761400000027abc901def",
@@ -7699,7 +8181,9 @@
           "changed_at": "2025-11-22T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-008",
+      "department_name": "Public Safety"
     },
     {
       "user_id": "1761400000014nop012qrs",
@@ -7736,7 +8220,9 @@
           "changed_at": "2025-11-14T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761400000015qrs345tuv",
@@ -7773,7 +8259,9 @@
           "changed_at": "2025-11-25T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761400000029ghi567jkl",
@@ -7790,7 +8278,9 @@
       "location_address": "Elm Boulevard",
       "image_path": "/uploads/issue_1413.jpg",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-008",
+      "department_name": "Public Safety"
     },
     {
       "user_id": "1761400000002def456ghi",
@@ -7828,7 +8318,9 @@
           "changed_at": "2025-11-03T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-008",
+      "department_name": "Public Safety"
     },
     {
       "user_id": "1761401960787mvtlnkn0a",
@@ -7844,7 +8336,9 @@
       "updated_at": "2025-12-03T13:17:57.134921Z",
       "location_address": "Elm Boulevard",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761400000001abc123def",
@@ -7881,7 +8375,9 @@
           "changed_at": "2025-10-27T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-003",
+      "department_name": "Electrical Services"
     },
     {
       "user_id": "1761400000002def456ghi",
@@ -7918,7 +8414,9 @@
           "changed_at": "2025-12-15T13:17:57.134921Z",
           "comment": "Issue resolved successfully"
         }
-      ]
+      ],
+      "department_id": "dept-008",
+      "department_name": "Public Safety"
     },
     {
       "user_id": "1761400000023opq789rst",
@@ -7935,7 +8433,9 @@
       "location_address": "Main Street",
       "image_path": "/uploads/issue_9812.jpg",
       "public_comments": [],
-      "status_history": []
+      "status_history": [],
+      "department_id": "dept-007",
+      "department_name": "Parks & Horticulture"
     },
     {
       "user_id": "1761396234484vbvmk3i07",
@@ -7972,7 +8472,9 @@
           "changed_at": "2025-11-11T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-004",
+      "department_name": "Water & Sewage"
     },
     {
       "user_id": "1761400000022lmn456opq",
@@ -8009,7 +8511,9 @@
           "changed_at": "2025-11-27T13:17:57.134921Z",
           "comment": "Issue assigned to relevant department"
         }
-      ]
+      ],
+      "department_id": "dept-002",
+      "department_name": "Sanitation"
     }
   ]
 }

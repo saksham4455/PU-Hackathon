@@ -72,29 +72,29 @@ export function DepartmentHeadDashboard() {
         if (!worker) return;
 
         try {
-            const issueIndex = issues.findIndex(i => i.id === issueId);
-            if (issueIndex === -1) return;
+            const { issue: updatedIssue, error } = await localStorageService.assignIssue(
+                issueId,
+                worker.id,
+                worker.full_name,
+                user?.full_name || 'Department Head'
+            );
 
-            const updatedIssue = {
-                ...issues[issueIndex],
-                assigned_to_worker_id: worker.id,
-                assigned_to_worker_name: worker.full_name,
-                assigned_by: user?.full_name,
-                assigned_at: new Date().toISOString(),
-                department_id: user?.department_id,
-                department_name: user?.department_name,
-                status: 'in_progress' as const
-            };
+            if (error) throw error;
 
-            // Update local state
-            const newIssues = [...issues];
-            newIssues[issueIndex] = updatedIssue;
-            setIssues(newIssues);
+            if (updatedIssue) {
+                // Update local state
+                const issueIndex = issues.findIndex(i => i.id === issueId);
+                if (issueIndex !== -1) {
+                    const newIssues = [...issues];
+                    newIssues[issueIndex] = updatedIssue;
+                    setIssues(newIssues);
+                }
+            }
 
-            // In a real app, this would call an API
             console.log('Assigned issue', issueId, 'to worker', worker.full_name);
         } catch (error) {
             console.error('Error assigning worker:', error);
+            alert('Failed to assign worker. Please try again.');
         }
     };
 

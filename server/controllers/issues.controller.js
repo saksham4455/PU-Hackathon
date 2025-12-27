@@ -138,6 +138,58 @@ export async function updateStatus(req, res) {
     }
 }
 
+export const assignIssue = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { worker_id, worker_name, assigned_by } = req.body;
+
+        const issuesData = await readJsonFile(ISSUES_FILE);
+        if (!issuesData) {
+            return res.status(500).json({ error: 'Failed to read issues data' });
+        }
+
+        const issueIndex = issuesData.issues.findIndex(i => i.id === id);
+        if (issueIndex === -1) {
+            return res.status(404).json({ error: 'Issue not found' });
+        }
+
+        const issue = issuesData.issues[issueIndex];
+        const oldStatus = issue.status;
+
+        issue.assigned_to_worker_id = worker_id;
+        issue.assigned_to_worker_name = worker_name;
+        issue.assigned_by = assigned_by;
+        issue.assigned_at = new Date().toISOString();
+        issue.status = 'in_progress';
+        issue.updated_at = new Date().toISOString();
+
+        // Add to status history
+        if (!issue.status_history) {
+            issue.status_history = [];
+        }
+
+        issue.status_history.push({
+            id: generateId(),
+            issue_id: id,
+            old_status: oldStatus,
+            new_status: 'in_progress',
+            changed_by: assigned_by,
+            changed_by_name: assigned_by,
+            changed_at: new Date().toISOString(),
+            comment: `Issue assigned to ${worker_name}`
+        });
+
+        if (await writeJsonFile(ISSUES_FILE, issuesData)) {
+            res.json({ issue, message: 'Issue assigned successfully' });
+        } else {
+            res.status(500).json({ error: 'Failed to save issue' });
+        }
+    } catch (error) {
+        console.error('Assign issue error:', error);
+        res.status(500).json({ error: 'Failed to assign issue' });
+    }
+}
+
 /**
  * Update admin notes
  */

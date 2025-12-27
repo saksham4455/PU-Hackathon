@@ -322,6 +322,32 @@ class BackendAPIService {
     }
   }
 
+  async assignIssue(issueId: string, workerId: string, workerName: string, assignedBy: string): Promise<{ issue: Issue | null; error: Error | null }> {
+    try {
+      const response = await fetch(`${this.baseURL}/issues/${issueId}/assign`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          worker_id: workerId,
+          worker_name: workerName,
+          assigned_by: assignedBy
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        return { issue: null, error: new Error(data.error || 'Failed to assign issue') };
+      }
+
+      return { issue: data.issue, error: null };
+    } catch (error) {
+      return { issue: null, error: error as Error };
+    }
+  }
+
   async updateIssueAdminNotes(issueId: string, adminNotes: string): Promise<{ issue: Issue | null; error: Error | null }> {
     try {
       const response = await fetch(`${this.baseURL}/issues/${issueId}/admin-notes`, {
